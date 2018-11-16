@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import UserTables from './UserTables.js';
+import ReactDOM from 'react-dom';
 
 class Stuff extends Component {
   constructor(props) {
     super(props);
-
+    }
+    getAllUsers = () => {
+      ReactDOM.render(<UserTables />,document.getElementById('userTable'));
     }
   createRecipe = (event) => {
     event.preventDefault();
@@ -35,7 +39,7 @@ render() {
     <br/>
     <input id = "methodOfRecipe"  type = "text"placeholder = "Method..." />
     <br/>
-    Please enter your unique ID number, if you do not have one please click <a href="www.google.com">here</a> to create an account
+    Please enter your unique ID number, if you do not have one please click <a href = '#' onClick={() => this.createUser()}>here</a> to create an account. If you do not know your Unique ID number, click <a href ='#' onClick = {() => this.getAllUsers()}> here </a> to find your ID number.
     <br/>
     <input id ="idOfUserAddingRecipe" type ="number" placeholder = "ID number" />
     <br/>
