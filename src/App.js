@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RecipeTables from './RecipeTables.js'
 import AddRecipes from './AddRecipes.js'
+import UpdateRecipes from './UpdateRecipes.js'
 
 
 class App extends Component {
@@ -13,6 +14,11 @@ class App extends Component {
         <h2> Search through the table to find the recipe you are looking for </h2>
 
         <AddRecipes appRecipe="Add recipe"/>
+         <div id='stuff'>
+         </div>
+        <UpdateRecipes />
+         <div id='updating'>
+         </div>
         <RecipeTables />
        </header>
      </div>

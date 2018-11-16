@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-
 import ReactDOM from 'react-dom';
 import Stuff from './Stuff.js';
+import AddRecipes from './AddRecipes.js';
 
-class AddRecipes extends Component {
+class UpdateRecipes extends Component {
 functionAddRecipes() {
   ReactDOM.render(<Stuff />,document.getElementById('stuff'));
 }
   render() {
     return (
       <div>
-      <button className="btn btn-success" onClick={this.functionAddRecipes}>{this.props.appRecipe}</button>
       </div>
     );
   }
 }
 
-export default AddRecipes;
+export default UpdateRecipes;

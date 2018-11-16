@@ -1,33 +1,45 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
-import ReactDOM from 'react-dom';
 
 class Stuff extends Component {
+  constructor(props) {
+    super(props);
 
-  createRecipe = () => {
-
-  }
+    }
+  createRecipe = (event) => {
+    event.preventDefault();
+    var data ={
+      recipeName:document.getElementById('nameOfRecipe').value,
+      recipeIngredients:document.getElementById('ingredientsOfRecipe').value,
+      recipeMethod:document.getElementById('methodOfRecipe').value,
+      userID:document.getElementById('idOfUserAddingRecipe').vaue
+    }
+    axios.post('http://localhost:8081/MyPersonalProject/rest/recipes/createRecipe', data)
+         .then((response) => {
+            console.log(response.data);
+            window.location.reload();
+    });
+}
 render() {
   return (
     <div>
     Name of recipe
     <br/>
-    <input type = "text" id = "nameOfRecipe" placeholder = "Name..." />
+    <input id="nameOfRecipe" type = "text" placeholder = "Name..." />
     <br/>
     List all the ingredients (seperated by a comma)
     <br/>
-    <input type = "text" id = "ingredientsOfRecipe" placeholder = "Ingredients..." />
+    <input id = "ingredientsOfRecipe" type = "text" placeholder = "Ingredients..." />
     <br/>
     Describe how you make your meal
     <br/>
-    <input type = "text" id = "methodOfRecipe" placeholder = "Method..." />
+    <input id = "methodOfRecipe"  type = "text"placeholder = "Method..." />
     <br/>
     Please enter your unique ID number, if you do not have one please click <a href="www.google.com">here</a> to create an account
     <br/>
-    <input type ="number" id ="idOfUserAddingRecipe" placeholder = "ID number" />
+    <input id ="idOfUserAddingRecipe" type ="number" placeholder = "ID number" />
     <br/>
-    <button className="btn tbn-primary" onClick={this.createRecipe}>Add recipe</button>
+    <button className="btn btn-success" onClick={this.createRecipe}>Add recipe</button>
     </div>
   );
 }
