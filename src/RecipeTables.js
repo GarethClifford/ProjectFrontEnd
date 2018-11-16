@@ -55,12 +55,10 @@ class RecipeTables extends Component {
       expandComponent={ this.expandComponent }
       search>
       <TableHeaderColumn Column width={'3%'} dataField='recipeID' isKey>ID</TableHeaderColumn>
-  
       <TableHeaderColumn Column width={'25%'} dataField='recipeName'>Name</TableHeaderColumn>
       <TableHeaderColumn dataField='recipeIngredients'>Ingredients</TableHeaderColumn>
       <TableHeaderColumn dataField='recipeMethod'>Method</TableHeaderColumn>
       <TableHeaderColumn dataField='button' dataFormat={this.createDeleteButton}>Delete</TableHeaderColumn>
-      <TableHeaderColumn dataField='button' dataFormat={this.createUpdateButton}>Update</TableHeaderColumn>
       </BootstrapTable>
       </div>
     );

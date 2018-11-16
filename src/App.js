@@ -12,11 +12,11 @@ class App extends Component {
        <header className="App-header">
         <h1> My Personal Project </h1>
         <h2> Search through the table to find the recipe you are looking for </h2>
-
         <AddRecipes appRecipe="Add recipe"/>
+        <UpdateRecipes />
          <div id='stuff'>
          </div>
-        <UpdateRecipes />
+         <br/>
          <div id='updating'>
          </div>
         <RecipeTables />
