@@ -7,15 +7,35 @@ import ReactDOM from 'react-dom';
 
 
 
+class BSTable extends React.Component {
+  render() {
+      return (
+        <BootstrapTable data={ this.props.data } options ={ { noDataText: 'There are currently no reviews for this recipe' } }>
+          <TableHeaderColumn dataField='reviewID' isKey={ true }>Review ID</TableHeaderColumn>
+          <TableHeaderColumn dataField='reviewRating'>Rating</TableHeaderColumn>
+          <TableHeaderColumn dataField='reviewComments'>Comments</TableHeaderColumn>
+          <TableHeaderColumn dataField='userID'>User ID</TableHeaderColumn>
+        </BootstrapTable>);
+}
+}
 
-class RecipeTables extends Component {
+
+export default class RecipeTables extends Component {
   constructor(props){
     super(props);
     this.state = {
       infos: this.props.array
     }
   }
+  isExpandableRow(row) {
+    return true
+  }
 
+  expandComponent(row) {
+    return (
+      <BSTable data={ row.reviews } />
+    );
+  }
 
     getAllRecipes = () => {
       axios.get('http://localhost:8081/MyPersonalProject/rest/recipes/getAll').then(response => {
@@ -25,7 +45,6 @@ class RecipeTables extends Component {
       });
     }
     createDeleteButton =(cell,row) => {
-      console.log("SUP TOM");
       return <button id={row.recipeID} className="btn btn-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
     }
     deleteRecipe = (event) => {
@@ -33,28 +52,42 @@ class RecipeTables extends Component {
     window.location.reload()
       });
     }
-    createUpdateButton =(cell,row) => {
-      return <button id={row.recideID} className="btn btn-warning" onClick={() => this.updateRecipe(row.recipeID)}>Update recipe</button>;
+    createDeleteButtonReview =(cell,row) => {
+      return <button id={row.recipeID} className="btn btn-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
+    }
+    deleteReview = (event) => {
+      axios.delete('http://localhost:8081/MyPersonalProject/rest/reviews/deleteReview/' + event).then((reponse) => {
+        window.location.reload()
+      });
     }
 
   componentDidMount() {
     this.getAllRecipes();
   }
   render () {
+    const options = {
+      expandRowBgColor: 'rgb(16,239,150)',
+      expandBy:'column'
+    }
 
     return (
-      <div className="recipeTable" style={{width:'75%'}} >
+      <div className="recipeTable" style={{ width: '75%', margin:'auto'}} >
       <BootstrapTable data={this.state.infos}
+      height='650'
+      scrollTop={ 'Bottom' }
       striped
-      search>
-      <TableHeaderColumn Column width={'3%'} dataField='recipeID' isKey>ID</TableHeaderColumn>
-      <TableHeaderColumn Column width={'25%'} dataField='recipeName'>Name</TableHeaderColumn>
-      <TableHeaderColumn dataField='recipeIngredients'>Ingredients</TableHeaderColumn>
+      search
+      options={ { options, noDataText: 'There are currently no reviews for this recipe' } }
+      expandableRow={ this.isExpandableRow }
+      expandComponent={ this.expandComponent }>
+      <TableHeaderColumn Column width={'5%'} dataField='recipeID' dataAlign="center" isKey={ true }>ID</TableHeaderColumn>
+      <TableHeaderColumn Column width={'9%'} dataField='userID' dataAlign='center'> User ID</TableHeaderColumn>
+      <TableHeaderColumn Column width={'25%'} dataField='recipeName' dataAlign="center">Name</TableHeaderColumn>
+      <TableHeaderColumn dataField='recipeIngredients' dataAlign="center">Ingredients</TableHeaderColumn>
       <TableHeaderColumn tdStyle={{ whiteSpace: 'unset'}} dataField='recipeMethod'>Method</TableHeaderColumn>
-      <TableHeaderColumn dataField='button' dataFormat={this.createDeleteButton}>Delete</TableHeaderColumn>
+      <TableHeaderColumn dataField='button' dataFormat={this.createDeleteButton} dataAlign="center" expandable={false} >Delete</TableHeaderColumn>
       </BootstrapTable>
       </div>
     );
   }
 }
-export default RecipeTables;

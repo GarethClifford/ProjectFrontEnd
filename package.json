@@ -8,14 +8,15 @@
     "express": "^4.16.4",
     "lodash": "^4.17.11",
     "react": "^16.6.3",
+    "react-bootstrap": "^0.32.4",
     "react-bootstrap-navbar": "^1.1.0",
     "react-bootstrap-table": "^4.3.1",
     "react-bootstrap-table-next": "^1.4.1",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-scripts": "^2.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3002 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

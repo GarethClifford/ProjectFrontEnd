@@ -36,7 +36,7 @@ class UserTables extends Component {
       expandRowBgColor:'rgb(242,255,163)'
     };
     return (
-      <div className="userTable" style={{width:'40%'}} >
+      <div className="userTable" style={{width:'40%', margin:'auto'}} >
       <BootstrapTable data={this.state.peoples}
       options={ options }
       striped

@@ -27,7 +27,7 @@ class UserCreate extends Component {
 render() {
   return (
     <div>
-    Name of recipe
+    Name of user
     <br/>
     <input id="nameOfUser" type = "text" placeholder = "Name..." />
     <br/>

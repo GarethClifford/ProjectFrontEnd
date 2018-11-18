@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import UserTables from './UserTables.js';
 import ReactDOM from 'react-dom';
+import UserCreate from './UserCreate';
 
 class Stuff extends Component {
   constructor(props) {
     super(props);
     }
     getAllUsers = () => {
-      ReactDOM.render(<UserTables />,document.getElementById('userTable'));
+      ReactDOM.render(<UserTables />,document.getElementById('showingUsers'));
+    }
+    createUser = () => {
+      ReactDOM.render(<UserCreate />,document.getElementById('createUser'))
     }
   createRecipe = (event) => {
     event.preventDefault();
@@ -21,8 +25,9 @@ class Stuff extends Component {
     axios.post('http://localhost:8081/MyPersonalProject/rest/recipes/createRecipe', data)
          .then((response) => {
             console.log(response.data);
-            window.location.reload();
+
     });
+    document.getElementById('creatingARecipe').innerHTML='Recipe has been added'
 }
 render() {
   return (
