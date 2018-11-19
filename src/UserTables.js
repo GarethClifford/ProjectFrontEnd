@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { BootstrapTable, TableHeaderColumn, BSTable } from 'react-bootstrap-table';
-import UpdateRecipes from './UpdateRecipes.js';
-import ReactDOM from 'react-dom';
 
 class UserTables extends Component {
   constructor(props){

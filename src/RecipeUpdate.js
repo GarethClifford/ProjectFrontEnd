@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-
-class OtherStuff extends Component {
+class RecipeUpdate extends Component {
     updateRecipe = (event) => {
         var data = {
         recipeID:document.getElementById('idOfRecipe').value,
@@ -43,4 +42,4 @@ Enter the new method
 
 }
 
-export default OtherStuff;
+export default RecipeUpdate;

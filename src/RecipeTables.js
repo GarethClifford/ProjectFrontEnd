@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
-import UpdateRecipes from './UpdateRecipes.js';
-import ReactDOM from 'react-dom';
-
-
-
 
 class BSTable extends React.Component {
   render() {
@@ -45,7 +40,7 @@ export default class RecipeTables extends Component {
       });
     }
     createDeleteButton =(cell,row) => {
-      return <button id={row.recipeID} className="btn btn-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
+      return <button id={row.recipeID} className="btn btn-outline-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
     }
     deleteRecipe = (event) => {
       axios.delete('http://localhost:8081/MyPersonalProject/rest/recipes/deleteRecipe/' + event).then((response) => {
@@ -53,7 +48,7 @@ export default class RecipeTables extends Component {
       });
     }
     createDeleteButtonReview =(cell,row) => {
-      return <button id={row.recipeID} className="btn btn-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
+      return <button id={row.recipeID} className="btn btn-outline-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
     }
     deleteReview = (event) => {
       axios.delete('http://localhost:8081/MyPersonalProject/rest/reviews/deleteReview/' + event).then((reponse) => {
@@ -64,6 +59,7 @@ export default class RecipeTables extends Component {
   componentDidMount() {
     this.getAllRecipes();
   }
+
   render () {
     const options = {
       expandRowBgColor: 'rgb(16,239,150)',
@@ -81,7 +77,6 @@ export default class RecipeTables extends Component {
       expandableRow={ this.isExpandableRow }
       expandComponent={ this.expandComponent }>
       <TableHeaderColumn Column width={'5%'} dataField='recipeID' dataAlign="center" isKey={ true }>ID</TableHeaderColumn>
-      <TableHeaderColumn Column width={'9%'} dataField='userID' dataAlign='center'> User ID</TableHeaderColumn>
       <TableHeaderColumn Column width={'25%'} dataField='recipeName' dataAlign="center">Name</TableHeaderColumn>
       <TableHeaderColumn dataField='recipeIngredients' dataAlign="center">Ingredients</TableHeaderColumn>
       <TableHeaderColumn tdStyle={{ whiteSpace: 'unset'}} dataField='recipeMethod'>Method</TableHeaderColumn>

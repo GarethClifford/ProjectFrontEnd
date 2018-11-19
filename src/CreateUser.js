@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import RecipeTables from './RecipeTables.js';
-import AddRecipes from './AddRecipes.js';
-import UpdateRecipes from './UpdateRecipes.js';
 import UserTables from './UserTables.js';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-class UserCreate extends Component {
+class CreateUser extends Component {
   constructor(props) {
     super(props);
     }
     getAllUsers = () => {
-      ReactDOM.render(<UserTables />,document.getElementById('userTable'));
+      ReactDOM.render(<UserTables />,document.getElementById('creatingARecipe'));
     }
   createUser = (event) => {
     event.preventDefault();
@@ -21,8 +18,8 @@ class UserCreate extends Component {
     axios.post('http://localhost:8081/MyPersonalProject/rest/users/createUser', data)
          .then((response) => {
             console.log(response.data);
-            window.location.reload();
     });
+    document.getElementById('creatingARecipe').innerHTML='User has been added'
 }
 render() {
   return (
@@ -39,4 +36,4 @@ render() {
 }
 }
 
-export default UserCreate;
+export default CreateUser;

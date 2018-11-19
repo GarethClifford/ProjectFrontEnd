@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import UserTables from './UserTables.js';
 import ReactDOM from 'react-dom';
-import UserCreate from './UserCreate';
+import CreateUser from './CreateUser';
 
-class Stuff extends Component {
+class GetAllRecipes extends Component {
   constructor(props) {
     super(props);
     }
     getAllUsers = () => {
-      ReactDOM.render(<UserTables />,document.getElementById('showingUsers'));
+      ReactDOM.render(<UserTables />,document.getElementById('creatingARecipe'));
     }
     createUser = () => {
-      ReactDOM.render(<UserCreate />,document.getElementById('createUser'))
+      ReactDOM.render(<CreateUser />,document.getElementById('creatingARecipe'));
     }
   createRecipe = (event) => {
     event.preventDefault();
@@ -20,7 +20,7 @@ class Stuff extends Component {
       recipeName:document.getElementById('nameOfRecipe').value,
       recipeIngredients:document.getElementById('ingredientsOfRecipe').value,
       recipeMethod:document.getElementById('methodOfRecipe').value,
-      userID:document.getElementById('idOfUserAddingRecipe').vaue
+      userID:document.getElementById('idOfUserAddingRecipe').value
     }
     axios.post('http://localhost:8081/MyPersonalProject/rest/recipes/createRecipe', data)
          .then((response) => {
@@ -44,7 +44,7 @@ render() {
     <br/>
     <input id = "methodOfRecipe"  type = "text"placeholder = "Method..." />
     <br/>
-    Please enter your unique ID number, if you do not have one please click <a href = '#' onClick={() => this.createUser()}>here</a> to create an account. If you do not know your Unique ID number, click <a href ='#' onClick = {() => this.getAllUsers()}> here </a> to find your ID number.
+    Please enter your unique ID number, if you do not have one please click <a href ='#' onClick = {() => this.createUser()}> here </a> to create an account. If you do not know your Unique ID number, click <a href ='#' onClick = {() => this.getAllUsers()}> here </a> to find your ID number.
     <br/>
     <input id ="idOfUserAddingRecipe" type ="number" placeholder = "ID number" />
     <br/>
@@ -54,4 +54,4 @@ render() {
 }
 }
 
-export default Stuff;
+export default GetAllRecipes;
