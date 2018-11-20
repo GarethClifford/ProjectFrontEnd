@@ -31,24 +31,39 @@ class CreatingReviews extends Component {
     document.getElementById('creatingARecipe').innerHTML='Review has been added';
     ReactDOM.render(<RecipeTables />, document.getElementById('creatingARecipe'));
 }
+
+
+componentDidMount() {
+  this.countCharacter();
+}
+
+
+countCharacter = () => {
+  var maxText = 225;
+  document.getElementById('countMessage').innerHTML = '0 /' + maxText;
+  document.getElementById('commentsReview').onkeyup = function() {
+    var textLength = document.getElementById('commentsReview').value.length;
+    var textRemaining = maxText - textLength;
+    document.getElementById('countMessage').innerHTML = textLength + ' / ' + maxText
+  }
+}
+
 render() {
   return (
     <div>
     Recipe ID
     <br/>
-    <input id="idRecipeNumber" type = "number" placeholder = "ID Number" />
-    <br/>
+    <input id="idRecipeNumber" class ="form-control" type = "number" placeholder = "ID Number" style={{width:'10%'}} />
     Enter your user ID number
     <br/>
-    <input id = "idUser" type = "number" placeholder = "User ID" />
-    <br/>
+    <input id = "idUser" class ="form-control" type = "number" placeholder = "User ID" style={{width:'10%'}} />
     Give the recipe a rating from 1-5. 5 being the best, 1 the worst
     <br/>
-    <input id = "ratingOfRecipe"  type = "number" placeholder = "Rating" />
+    <input id = "ratingOfRecipe" class ="form-control" type = "number" placeholder = "Rating" style={{width:'10%'}} />
+    Feel free to add any comments on the recipe)
     <br/>
-    Feel free to add any comments on the recipe
-    <br/>
-    <input id ="commentsReview" type ="text" placeholder = "Comments" />
+    <textarea id ="commentsReview" class ="form-control" type ="text" placeholder = "Comments" style={{width:'25%'}} rows='3' maxlength="225" />
+    <h6 class="pull-right" id="countMessage"></h6>
     <br/>
     <button className="btn btn-success" onClick={this.createReview}>Add review</button>
     </div>

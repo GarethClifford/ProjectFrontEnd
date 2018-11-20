@@ -26,8 +26,7 @@ render() {
     <div>
     Name of user
     <br/>
-    <input id="nameOfUser" type = "text" placeholder = "Name..." />
-    <br/>
+    <input id="nameOfUser" type = "text" placeholder = "Name..." class ="form-control" style={{width:'10%'}} />
     <br/>
     <button className="btn btn-success" onClick={this.createUser}>Add user</button>
     <br/><br/>

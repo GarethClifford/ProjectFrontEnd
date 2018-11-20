@@ -25,7 +25,7 @@ class UserTables extends Component {
     });
   }
   createDeleteButton =(cell,row) => {
-    return <button id={row.userID} className="btn btn-danger" onClick={() => this.deleteUser(row.userID)}>Delete account</button>;
+    return <button id={row.userID} className="btn btn-outline-danger" onClick={() => this.deleteUser(row.userID)}>Delete account</button>;
   }
 
 
@@ -34,14 +34,14 @@ class UserTables extends Component {
       expandRowBgColor:'rgb(242,255,163)'
     };
     return (
-      <div className="userTable" style={{width:'40%', margin:'auto'}} >
+      <div className="userTable" style={{width:'30%', margin:'auto'}} >
       <BootstrapTable data={this.state.peoples}
       options={ options }
       striped
       search>
       <TableHeaderColumn Column width={'7%'} dataField='userID' isKey>ID</TableHeaderColumn>
-      <TableHeaderColumn Column width={'25%'} dataField='userName'>Name</TableHeaderColumn>
-      <TableHeaderColumn Column width={'25%'} dataField='button' dataFormat={this.createDeleteButton}>Delete</TableHeaderColumn>
+      <TableHeaderColumn Column width={'15%'} dataField='userName'>Name</TableHeaderColumn>
+      <TableHeaderColumn Column width={'15%'} dataField='button' dataFormat={this.createDeleteButton}>Delete</TableHeaderColumn>
       </BootstrapTable>
       </div>
     );

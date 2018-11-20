@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import ReactDOM from 'react-dom';
+import RecipeUpdate from './RecipeUpdate.js';
 
 class BSTable extends React.Component {
   render() {
@@ -44,16 +46,18 @@ export default class RecipeTables extends Component {
     }
     deleteRecipe = (event) => {
       axios.delete('http://localhost:8081/MyPersonalProject/rest/recipes/deleteRecipe/' + event).then((response) => {
-    window.location.reload()
+      ReactDOM.render(<RecipeTables />,document.getElementById('creatingARecipe'));
       });
+
     }
     createDeleteButtonReview =(cell,row) => {
       return <button id={row.recipeID} className="btn btn-outline-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
     }
     deleteReview = (event) => {
       axios.delete('http://localhost:8081/MyPersonalProject/rest/reviews/deleteReview/' + event).then((reponse) => {
-        window.location.reload()
+      ReactDOM.render(<RecipeTables />,document.getElementById('creatingARecipe'));
       });
+
     }
 
   componentDidMount() {
@@ -67,7 +71,7 @@ export default class RecipeTables extends Component {
     }
 
     return (
-      <div className="recipeTable" style={{ width: '75%', margin:'auto'}} >
+      <div className="recipeTable" style={{ width: '75%', margin:'auto',  expandRowBgColor: 'rgb(16,239,150)'}} >
       <BootstrapTable data={this.state.infos}
       height='650'
       scrollTop={ 'Bottom' }
@@ -80,7 +84,7 @@ export default class RecipeTables extends Component {
       <TableHeaderColumn Column width={'25%'} dataField='recipeName' dataAlign="center">Name</TableHeaderColumn>
       <TableHeaderColumn dataField='recipeIngredients' dataAlign="center">Ingredients</TableHeaderColumn>
       <TableHeaderColumn tdStyle={{ whiteSpace: 'unset'}} dataField='recipeMethod'>Method</TableHeaderColumn>
-      <TableHeaderColumn dataField='button' dataFormat={this.createDeleteButton} dataAlign="center" expandable={false} >Delete</TableHeaderColumn>
+      <TableHeaderColumn expandable={ false } dataField='button' dataFormat={this.createDeleteButton} dataAlign="center" >Delete</TableHeaderColumn>
       </BootstrapTable>
       </div>
     );
