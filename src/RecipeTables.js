@@ -67,24 +67,26 @@ export default class RecipeTables extends Component {
   render () {
     const options = {
       expandRowBgColor: 'rgb(16,239,150)',
-      expandBy:'column'
+      expandBy:'column',
+      noDataText: 'There are currently no reviews for this recipe'
     }
 
     return (
-      <div className="recipeTable" style={{ width: '75%', margin:'auto',  expandRowBgColor: 'rgb(16,239,150)'}} >
+      <div className="recipeTable" style={{ width: '75%', margin:'auto' }}>
       <BootstrapTable data={this.state.infos}
       height='650'
       scrollTop={ 'Bottom' }
-      striped
       search
-      options={ { options, noDataText: 'There are currently no reviews for this recipe' } }
+      striped
+      hover
+      options={ options  }
       expandableRow={ this.isExpandableRow }
       expandComponent={ this.expandComponent }>
       <TableHeaderColumn Column width={'5%'} dataField='recipeID' dataAlign="center" isKey={ true }>ID</TableHeaderColumn>
       <TableHeaderColumn Column width={'25%'} dataField='recipeName' dataAlign="center">Name</TableHeaderColumn>
       <TableHeaderColumn dataField='recipeIngredients' dataAlign="center">Ingredients</TableHeaderColumn>
       <TableHeaderColumn tdStyle={{ whiteSpace: 'unset'}} dataField='recipeMethod'>Method</TableHeaderColumn>
-      <TableHeaderColumn expandable={ false } dataField='button' dataFormat={this.createDeleteButton} dataAlign="center" >Delete</TableHeaderColumn>
+      <TableHeaderColumn Column min width={'20%'} expandable={ false } dataField='button' dataFormat={this.createDeleteButton} dataAlign="center" >Delete</TableHeaderColumn>
       </BootstrapTable>
       </div>
     );

@@ -47,17 +47,17 @@ return (
 <div>
 Enter the ID of the recipe you wish to update
 <br/>
-<input id="idOfRecipe" type = "number" placeholder = "Recipe ID" class ="form-control" style={{width:'10%'}} required = 'true'/>
+<input id="idOfRecipe" type = "number" placeholder = "Recipe ID" class ="form-control" style={{width:'150px'}} required = 'true'/>
 Enter the new name
 <br/>
-<input id = "newName" type = "text" placeholder = "Name" class ="form-control" style={{width:'10%'}} />
+<input id = "newName" type = "text" placeholder = "Name" class ="form-control" style={{width:'200px'}} />
 Enter the new ingredients
 <br/>
-<textarea id = "newIngredients"  type = "text"placeholder = "Ingredients" class ="form-control" style={{width:'25%'}} rows ='3' maxlength="5000"/>
+<textarea id = "newIngredients"  type = "text"placeholder = "Ingredients" class ="form-control" style={{width:'500px'}} rows ='3' maxlength="5000"/>
 <h6 class="pull-right" id="countMessage1" ></h6>
 Enter the new method (Max of 5000 characeters)
 <br/>
-<textarea id ="newMethod" type ="text" placeholder = "Method" class ="form-control" style={{width:'35%'}} rows ='4' maxlength="5000" />
+<textarea id ="newMethod" type ="text" placeholder = "Method" class ="form-control" style={{width:'700px'}} rows ='4' maxlength="5000" />
 <h6 class="pull-right" id="countMessage2"></h6>
 <br/>
 <button className="btn btn-success" onClick={this.updateRecipe}>Update recipe</button>

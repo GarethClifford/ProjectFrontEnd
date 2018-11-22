@@ -30,13 +30,10 @@ class UserTables extends Component {
 
 
   render () {
-    const options = {
-      expandRowBgColor:'rgb(242,255,163)'
-    };
     return (
       <div className="userTable" style={{width:'30%', margin:'auto'}} >
       <BootstrapTable data={this.state.peoples}
-      options={ options }
+      hover
       striped
       search>
       <TableHeaderColumn Column width={'7%'} dataField='userID' isKey>ID</TableHeaderColumn>

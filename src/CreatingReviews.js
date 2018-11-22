@@ -53,16 +53,16 @@ render() {
     <div>
     Recipe ID
     <br/>
-    <input id="idRecipeNumber" class ="form-control" type = "number" placeholder = "ID Number" style={{width:'10%'}} />
+    <input id="idRecipeNumber" class ="form-control" type = "number" placeholder = "ID Number" style={{width:'150px'}} />
     Enter your user ID number
     <br/>
-    <input id = "idUser" class ="form-control" type = "number" placeholder = "User ID" style={{width:'10%'}} />
+    <input id = "idUser" class ="form-control" type = "number" placeholder = "User ID" style={{width:'150px'}} />
     Give the recipe a rating from 1-5. 5 being the best, 1 the worst
     <br/>
-    <input id = "ratingOfRecipe" class ="form-control" type = "number" placeholder = "Rating" style={{width:'10%'}} />
+    <input id = "ratingOfRecipe" class ="form-control" type = "number" placeholder = "Rating" style={{width:'150px'}} />
     Feel free to add any comments on the recipe)
     <br/>
-    <textarea id ="commentsReview" class ="form-control" type ="text" placeholder = "Comments" style={{width:'25%'}} rows='3' maxlength="225" />
+    <textarea id ="commentsReview" class ="form-control" type ="text" placeholder = "Comments" style={{width:'500px'}} rows='3' maxlength="225" />
     <h6 class="pull-right" id="countMessage"></h6>
     <br/>
     <button className="btn btn-success" onClick={this.createReview}>Add review</button>
