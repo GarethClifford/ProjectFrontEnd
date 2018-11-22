@@ -4,7 +4,7 @@ import Tutorials from './Tutorials.js'
 
 class TutorialTable extends Component {
 functionGetTutorials() {
-  ReactDOM.render(<Tutorials />,document.getElementById('videotable'));
+  ReactDOM.render(<Tutorials />,document.getElementById('creatingARecipe'));
 }
   render() {
     return (

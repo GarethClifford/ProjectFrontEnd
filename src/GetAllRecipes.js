@@ -62,17 +62,17 @@ render() {
     <div>
     Name of recipe
     <br/>
-    <input id="nameOfRecipe" type = "text" placeholder = "Name..." class ="form-control" style={{width:'200px'}} />
+    <input id="nameOfRecipe" type = "text" placeholder = "Name..." className ="form-control" style={{width:'200px'}} />
     List all the ingredients
     <br/>
-    <textarea id = "ingredientsOfRecipe" type = "text" placeholder = "Ingredients..." class ="form-control" style={{width:'500px'}} rows ='3' maxlength="5000" />
-    <h6 class="pull-right" id="countMessage1" ></h6>
+    <textarea id = "ingredientsOfRecipe" type = "text" placeholder = "Ingredients..." className ="form-control" style={{width:'500px'}} rows ='3' maxLength="5000" />
+    <h6 className="pull-right" id="countMessage1" ></h6>
     Describe how you make your meal
-    <textarea id = "methodOfRecipe"  type = "text"placeholder = "Method..." class ="form-control" style={{width:'700px'}} rows ='4' maxlength="5000" />
-    <h6 class="pull-right" id="countMessage2" ></h6>
+    <textarea id = "methodOfRecipe"  type = "text"placeholder = "Method..." className ="form-control" style={{width:'700px'}} rows ='4' maxLength="5000" />
+    <h6 className="pull-right" id="countMessage2" ></h6>
     Please enter your unique ID number, if you do not have one please click <a href ='#' onClick = {() => this.createUser()}> here </a> to create an account. If you do not know your Unique ID number, click <a href ='#' onClick = {() => this.getAllUsers()}> here </a> to find your ID number.
     <br/>
-    <input id ="idOfUserAddingRecipe" type ="number" placeholder = "ID number" class ="form-control" style={{width:'150px'}} />
+    <input id ="idOfUserAddingRecipe" type ="number" placeholder = "ID number" className ="form-control" style={{width:'150px'}} />
     <br/>
     <button className="btn btn-success" onClick={this.createRecipe}>Add recipe</button>
     </div>

@@ -37,11 +37,10 @@ class App extends Component {
       </div>
       </div>
     </div>
-    <div id='creatingARecipe'>
+    <div id='creatingARecipe'></div>
+    <div id='seeVideo'></div>
     </div>
-    <div id='videotable' style={{display:'inline'}}></div>
-    <div id='videovideo'style={{display:'inline'}}></div>
-  </div>
+
 
     );
   }
