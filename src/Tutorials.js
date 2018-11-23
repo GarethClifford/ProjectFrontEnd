@@ -40,15 +40,17 @@ class Tutorials extends Component {
   tutorialVideo = (cell, row) => {
     this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
   }
+
   componentDidMount(){
     console.log(this.state.videourl);
+
+  }
+
+  render () {
     if(this.state.videourl!=0){
       console.log("ekfbhslhjbdjlbgfsdjklghserkltherlkgtklerb");
       ReactDOM.render(<Videothing videourl={this.state.videourl} />,document.getElementById('playvideo'));
     }
-  }
-
-  render () {
     return (
       <div className="userTable" style={{width:'30%', margin:'auto'}} >
       <div style={{float:'left'}}>
