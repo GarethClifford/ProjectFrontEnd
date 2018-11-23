@@ -42,11 +42,11 @@ class Tutorials extends Component {
     for(var i = 1; i<5;i++){
       var video = document.getElementById("video"+i);
       if(cell=video) {
-        video+i.style.height = '450px';
-        video+i.style.width = '700px';
+        video.style.height = '450px';
+        video.style.width = '700px';
       }else{
-        video+i.style.height = '100px';
-        video+i.style.width = '100px';
+        video.style.height = '100px';
+        video.style.width = '100px';
       }
     }
   }
