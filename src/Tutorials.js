@@ -38,7 +38,6 @@ class Tutorials extends Component {
   }
 
   tutorialVideo = (cell, row) => {
-
     this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
   }
 
@@ -49,7 +48,9 @@ class Tutorials extends Component {
 
   render () {
     if(this.state.videourl!=0){
-      document.getElementById('playervideo').removeChild(document.getElementById("videoimage"))
+      if(document.getElementById("playervideo").childElementCount!=0){
+        document.getElementById('playervideo').removeChild(document.getElementById("videoimage"))
+      }
       console.log(this.state.videourl);
       ReactDOM.render(<Videothing id = "videoimage" videourl={this.state.videourl} />,document.getElementById('playvideo'));
     }
