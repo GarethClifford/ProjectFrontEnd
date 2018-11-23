@@ -49,7 +49,7 @@ class Tutorials extends Component {
   render () {
     if(this.state.videourl!=0){
       console.log(this.state.videourl);
-      document.getElementById("playvideo").parentNode.removeChild(document.getElementById("videoimage"));
+      //document.getElementById("playvideo").parentNode.removeChild(document.getElementById("videoimage"));
       var video = document.createElement("div");
       video.appendChild(<iframe id = "videoimage" width="560" height="315" src={this.state.videourl} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
       //ReactDOM.render(<Videothing id = "videoimage" videourl={this.state.videourl} />,document.getElementById('playvideo'));
