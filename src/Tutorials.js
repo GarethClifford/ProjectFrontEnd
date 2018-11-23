@@ -55,20 +55,12 @@ class Tutorials extends Component {
       <TableHeaderColumn Column width={'13%'} dataField='userID' >User ID</TableHeaderColumn>
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
+      <iframe width='700' height='450' src={this.state.tutorialURL} frameBorder='0' allow='acceleromter;autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen float='left'></iframe>
       </div><div style={{display:'inline'}}>
-      // <iframe width='700' height='450' src={this.state.tutorialURL} frameBorder='0' allow='acceleromter;autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
+
       </div></div>
     );
   }
-
-
-
-
-
-
-
-
-
 }
 
 export default Tutorials;
