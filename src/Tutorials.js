@@ -41,15 +41,15 @@ class Tutorials extends Component {
     this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
   }
 
-  componentDidMount(){
-    console.log(this.state.videourl);
-    //ReactDOM.render(<Videothing id = "videoimage" videourl={this.state.videourl} />,document.getElementById('playvideo'));
-  }
+  // componentDidMount(){
+  //   console.log(this.state.videourl);
+  //   //ReactDOM.render(<Videothing id = "videoimage" videourl={this.state.videourl} />,document.getElementById('playvideo'));
+  // }
 
   render () {
-
     if(this.state.videourl!=0){
       console.log(this.state.videourl);
+      document.getElementById("playvideo").parentNode.removeChild(document.getElementById("videoimage"));
       ReactDOM.render(<Videothing id = "videoimage" videourl={this.state.videourl} />,document.getElementById('playvideo'));
     }
     return (
