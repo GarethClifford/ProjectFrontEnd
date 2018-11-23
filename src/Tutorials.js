@@ -34,7 +34,7 @@ class Tutorials extends Component {
 
   createTutorialButton =(cell,row) => {
     this.setState({
-      tutorialURL:this.state.tuts[cell-1].tutorialLink
+      tutorialURL:this.state.tuts[1].tutorialLink
     });
     return <button id={row.tutorialID} className="btn btn-outline-primary" onClick={() => this.tutorialVideo(row.tutorialID)}>Watch tutorial</button>;
   }
