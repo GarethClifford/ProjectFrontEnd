@@ -40,7 +40,7 @@
   color: #61dafb;
 }
 
-.recipeTable {
+.RecipeTables {
   align-items: center;
   overflow-y:auto;
   max-height: 400px;
