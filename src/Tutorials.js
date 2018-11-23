@@ -39,12 +39,11 @@ class Tutorials extends Component {
 
   tutorialVideo = (cell, row) => {
     this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
-    ReactDOM.render(<Videothing id = "playvideo" videourl={this.state.videourl} />,document.getElementById('playvideo'));
+    //ReactDOM.render(<Videothing id = "playvideo" videourl={this.state.videourl} />,document.getElementById('playvideo'));
   }
 
   componentDidMount(){
     console.log(this.state.videourl);
-    //ReactDOM.render(<Videothing id = "playvideo" videourl={this.state.videourl} />,document.getElementById('playvideo'));
   }
 
   render () {
@@ -62,6 +61,11 @@ class Tutorials extends Component {
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
       </div><div id='playvideo' style={{float:'left'}}>
+      <Videothing id = "1" videourl={'https://www.youtube.com/embed/0LJb66aYtG8'} />
+      <Videothing id = "2" videourl={'https://www.youtube.com/embed/WeLQpUC2IW4'} />
+      <Videothing id = "3" videourl={'https://www.youtube.com/embed/J94uO-urSTg'} />
+      <Videothing id = "4" videourl={'https://www.youtube.com/embed/TgA2y-Bgi3c'} />
+
       </div></div>
     );
   }
