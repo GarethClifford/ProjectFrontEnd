@@ -43,14 +43,9 @@ class Tutorials extends Component {
 
   componentDidMount(){
     console.log(this.state.videourl);
-
-    ReactDOM.render(
-      <div>
-        <div id='playvideo' style={{float:'left'}}>
-        </div>
-        <Videothing id = "videoimage" videourl={this.state.videourl} />
-      </div>,
-      document.getElementById('playvideo'));
+    var videoOb = <Videothing id = "videoimage" videourl={this.state.videourl} />;
+    document.getElementById("playvideo").appendChild(videoOb);
+    //ReactDOM.render(<Videothing id = "videoimage" videourl={this.state.videourl} />,document.getElementById('playvideo'));
   }
 
   render () {
@@ -67,6 +62,7 @@ class Tutorials extends Component {
       <TableHeaderColumn Column width={'13%'} dataField='userID' >User ID</TableHeaderColumn>
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
+      </div><div id='playvideo' style={{float:'left'}}>
       </div></div>
     );
   }
