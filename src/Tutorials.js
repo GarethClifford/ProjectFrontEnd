@@ -39,7 +39,7 @@ class Tutorials extends Component {
 
   tutorialVideo = (cell, row) => {
     console.log(this.state.tuts[cell-1].tutorialLink);
-    ReactDOM.render(<Videothing videourl={this.state.tuts[cell-1].tutorialLink} />,document.getElementById('seeVideo'));
+    ReactDOM.render(<Videothing videourl={this.state.tuts[cell-1].tutorialLink} />,document.getElementById('playvideo'));
     this.state.increment+=1;
   }
 
@@ -57,8 +57,8 @@ class Tutorials extends Component {
       <TableHeaderColumn Column width={'13%'} dataField='userID' >User ID</TableHeaderColumn>
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
-      </div><div style={{display:'inline'}}>
-
+      </div><div id='playvideo' style={{display:'inline'}}>
+      
       </div></div>
     );
   }
