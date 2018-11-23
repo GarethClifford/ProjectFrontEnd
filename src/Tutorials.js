@@ -39,13 +39,11 @@ class Tutorials extends Component {
 
   tutorialVideo = (cell, row) => {
     ReactDOM.render(<Videothing videourl={this.state.tuts[cell-1].tutorialLink} />,document.getElementById('playvideo'));
-    this.forceUpdate;
     this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
-    // this.forceUpdate();
   }
 
   render () {
-    this.setState({ videourl: this.state.tuts[cell-1].tutorialLink })
+    this.forceUpdate()
     return (
       <div className="userTable" style={{width:'30%', margin:'auto'}} >
       <div style={{display:'inline'}}>
