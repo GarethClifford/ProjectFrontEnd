@@ -29,7 +29,7 @@ class Tutorials extends Component {
         userID:7,
         tutorialLink:'https://www.youtube.com/embed/TgA2y-Bgi3c'
       }],
-      videourl:1
+      videourl:0
     }
   }
 
@@ -47,7 +47,11 @@ class Tutorials extends Component {
   }
 
   render () {
-    console.log(this.state.videourl);
+
+    if(this.state.videourl!=0){
+      console.log(this.state.videourl);
+      ReactDOM.render(<Videothing id = "videoimage" videourl={this.state.videourl} />,document.getElementById('playvideo'));
+    }
     return (
       <div className="userTable" style={{width:'30%', margin:'auto'}} >
       <div style={{float:'left'}}>
