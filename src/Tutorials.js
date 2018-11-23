@@ -44,6 +44,7 @@ class Tutorials extends Component {
   componentDidMount(){
     console.log(this.state.videourl);
     if(this.state.videourl!=0){
+      console.log("ekfbhslhjbdjlbgfsdjklghserkltherlkgtklerb");
       ReactDOM.render(<Videothing videourl={this.state.videourl} />,document.getElementById('playvideo'));
     }
   }
