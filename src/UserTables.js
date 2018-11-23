@@ -13,14 +13,14 @@ class UserTables extends Component {
     this.getAllUsers();
   }
   getAllUsers = () => {
-    axios.get('http://localhost:8081/MyPersonalProject/rest/users/getAll').then(response => {
+    axios.get('http://104.199.39.236:8080/MyPersonalProject/rest/users/getAll').then(response => {
       this.setState({
         peoples: response.data
       });
     });
   }
   deleteUser = (event) => {
-    axios.delete('http://localhost:8081/MyPersonalProject/rest/users/deleteUser/' + event).then((response) => {
+    axios.delete('http://104.199.39.236:8080/MyPersonalProject/rest/users/deleteUser/' + event).then((response) => {
   window.location.reload()
     });
   }

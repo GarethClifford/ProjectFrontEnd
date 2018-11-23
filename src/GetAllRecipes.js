@@ -22,7 +22,7 @@ class GetAllRecipes extends Component {
       recipeMethod:document.getElementById('methodOfRecipe').value,
       userID:document.getElementById('idOfUserAddingRecipe').value
     }
-    axios.post('http://localhost:8081/MyPersonalProject/rest/recipes/createRecipe', data)
+    axios.post('http://104.199.39.236:8080/MyPersonalProject/rest/recipes/createRecipe', data)
          .then((response) => {
             console.log(response.data);
 

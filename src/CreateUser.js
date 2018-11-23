@@ -15,7 +15,7 @@ class CreateUser extends Component {
     var data ={
       userName:document.getElementById('nameOfUser').value,
     }
-    axios.post('http://localhost:8081/MyPersonalProject/rest/users/createUser', data)
+    axios.post('http://104.199.39.236:8080/MyPersonalProject/rest/users/createUser', data)
          .then((response) => {
             console.log(response.data);
     });
