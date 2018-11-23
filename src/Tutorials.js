@@ -41,7 +41,7 @@ class Tutorials extends Component {
     this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
     for(var i = 1; i<5;i++){
       var video = document.getElementById("video"+i);
-      if(cell=video.id){
+      if(cell=video) {
         video.style.height = '450px';
         video.style.width = '700px';
       }else{
