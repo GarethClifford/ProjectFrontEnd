@@ -39,7 +39,16 @@ class Tutorials extends Component {
 
   tutorialVideo = (cell, row) => {
     this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
-    //ReactDOM.render(<Videothing id = "playvideo" videourl={this.state.videourl} />,document.getElementById('playvideo'));
+    for(var i = 1; i<5;i++){
+      var video = document.getElementById(i);
+      if(cell=video.id){
+        video.style.height = '450px';
+        video.style.width = '700px';
+      }else{
+        video.style.height = '100px';
+        video.style.width = '100px';
+      }
+    }
   }
 
   componentDidMount(){
@@ -65,7 +74,6 @@ class Tutorials extends Component {
       <Videothing id = "2" videourl={'https://www.youtube.com/embed/WeLQpUC2IW4'} />
       <Videothing id = "3" videourl={'https://www.youtube.com/embed/J94uO-urSTg'} />
       <Videothing id = "4" videourl={'https://www.youtube.com/embed/TgA2y-Bgi3c'} />
-
       </div></div>
     );
   }
