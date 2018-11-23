@@ -37,7 +37,9 @@ class Tutorials extends Component {
   }
 
   tutorialVideo = (cell, row) => {
-    this.setState({tutorialURL:this.state.tuts[cell-1].tutorialLink});
+    this.setState({
+      tutorialURL:this.state.tuts[cell-1].tutorialLink.value
+    });
     console.log(this.state.tutorialURL)
     console.log(this.state.tuts[cell-1].tutorialLink);
     ReactDOM.render(<Videothing videourl={this.state.tutorialURL} />,document.getElementById('seeVideo'));
