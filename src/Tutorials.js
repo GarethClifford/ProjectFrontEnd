@@ -38,7 +38,6 @@ class Tutorials extends Component {
   }
 
   tutorialVideo = (cell, row) => {
-    console.log(cell);
     this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
   }
   componentDidMount(){
