@@ -45,7 +45,7 @@ class Tutorials extends Component {
   }
 
   render () {
-
+    this.setState({ videourl: this.state.tuts[cell-1].tutorialLink })
     return (
       <div className="userTable" style={{width:'30%', margin:'auto'}} >
       <div style={{display:'inline'}}>
