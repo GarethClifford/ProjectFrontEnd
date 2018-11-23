@@ -37,11 +37,10 @@ class Tutorials extends Component {
   }
 
   tutorialVideo = (cell, row) => {
-    var tutorialURL = this.state.tuts[cell-1].tutorialLink;
-    this.setState({cellno:this.state.tuts.tutorialID});
-    console.log(this.state.cellno);
+    this.setState({tutorialURL this.state.tuts[cell-1].tutorialLink});
+    console.log(this.state.tutorialURL)
     console.log(this.state.tuts[cell-1].tutorialLink);
-    ReactDOM.render(<Videothing videourl={this.state.tuts[cell-1].tutorialLink} />,document.getElementById('seeVideo'));
+    ReactDOM.render(<Videothing videourl={this.state.tutorialURL} />,document.getElementById('seeVideo'));
   }
 
   render () {
