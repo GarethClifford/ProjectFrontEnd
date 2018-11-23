@@ -44,9 +44,6 @@ class Tutorials extends Component {
       if(cell=video) {
         video.style.height = '450px';
         video.style.width = '700px';
-      }else{
-        video.style.height = '100px';
-        video.style.width = '100px';
       }
     }
   }
