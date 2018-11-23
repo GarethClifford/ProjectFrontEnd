@@ -6,9 +6,7 @@ import YouTube from 'react-youtube';
 class Videothing extends Component {
   constructor(props) {
     super(props);
-    this.state = ({
-      tutorialURL: this.props.videourl
-    })
+
 
   }
   onReady(event) {
