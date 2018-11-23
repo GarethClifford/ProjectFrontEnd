@@ -9,7 +9,6 @@ class Videothing extends Component {
     this.state = ({
       tutorialLINK: this.props.videourl
     })
-this.forceUpDate();
   }
   onReady(event) {
     event.target.pauseVideo();
