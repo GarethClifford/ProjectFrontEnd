@@ -47,7 +47,7 @@ class Tutorials extends Component {
   }
 
   render () {
-
+    console.log(this.state.videourl);
     return (
       <div className="userTable" style={{width:'30%', margin:'auto'}} >
       <div style={{float:'left'}}>
