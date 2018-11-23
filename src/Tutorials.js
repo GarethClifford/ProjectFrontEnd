@@ -43,7 +43,6 @@ class Tutorials extends Component {
   }
 
   render () {
-    this.forceUpdate()
     return (
       <div className="userTable" style={{width:'30%', margin:'auto'}} >
       <div style={{display:'inline'}}>
