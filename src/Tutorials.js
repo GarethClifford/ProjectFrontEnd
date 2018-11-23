@@ -45,7 +45,7 @@ class Tutorials extends Component {
   render () {
     return (
       <div className="userTable" style={{width:'30%', margin:'auto'}} >
-      <div style={{display:'inline', float:'left'}}>
+      <div style={{float:'left'}}>
       <BootstrapTable data={this.state.tuts}
       hover
       striped
@@ -55,7 +55,7 @@ class Tutorials extends Component {
       <TableHeaderColumn Column width={'13%'} dataField='userID' >User ID</TableHeaderColumn>
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
-      </div><div id='playvideo' style={{display:'inline', float:'left'}}>
+      </div><div id='playvideo' style={{float:'left'}}>
       </div></div>
     );
   }
