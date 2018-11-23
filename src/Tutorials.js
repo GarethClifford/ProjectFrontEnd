@@ -41,10 +41,9 @@ class Tutorials extends Component {
     this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
   }
 
-  componentDidMount(){
+  componentWillMount(){
     console.log(this.state.videourl);
     ReactDOM.render(<Videothing id = "videoimage" videourl={this.state.videourl} />,document.getElementById('playvideo'));
-
   }
 
   render () {
