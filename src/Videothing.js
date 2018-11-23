@@ -16,7 +16,7 @@ class Videothing extends Component {
 
     return (
       <div>
-      <iframe width='700' height='450' src={this.state.tuts[cell-1].tutorialLink} frameBorder='0' allow='acceleromter;autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
+      <iframe width='700' height='450' src={this.state.tuts[2-1].tutorialLink} frameBorder='0' allow='acceleromter;autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
       </div>
     );
 
