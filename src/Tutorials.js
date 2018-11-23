@@ -29,7 +29,7 @@ class Tutorials extends Component {
         userID:7,
         tutorialLink:'https://www.youtube.com/embed/TgA2y-Bgi3c'
       }],
-      increment:0
+      videourl:0
     }
   }
 
@@ -38,8 +38,12 @@ class Tutorials extends Component {
   }
 
   tutorialVideo = (cell, row) => {
-    ReactDOM.render(<Videothing videourl={this.state.tuts[cell-1].tutorialLink} />,document.getElementById('playvideo'));
     this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
+  }
+  componentDidMount(){
+    if(this.state.videourl!=0){
+      ReactDOM.render(<Videothing videourl={this.state.tuts[cell-1].tutorialLink} />,document.getElementById('playvideo'));
+    }
   }
 
   render () {
