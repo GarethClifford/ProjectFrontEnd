@@ -42,14 +42,11 @@
 
 .recipeTable {
   align-items: center;
+  overflow-y:auto;
+  max-height: 400px;
+  text-align: center
 }
 
-.stuff {
-  align-items: center;
-}
-@media (max-width:768px) {
-  #recipeTableShow {
-    font-size:50%;
-    
-  }
+
+
 }
