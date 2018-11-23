@@ -9,13 +9,12 @@ class Videothing extends Component {
     this.state = ({
       tutorialLINK: this.props.videourl
     })
-
+this.forceUpDate();
   }
   onReady(event) {
     event.target.pauseVideo();
   }
   render() {
-this.forceUpdate();
     return (
       <div>
       <iframe width='700' height='450' src={this.state.tutorialLINK} frameBorder='0' allow='autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
