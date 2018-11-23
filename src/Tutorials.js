@@ -28,18 +28,19 @@ class Tutorials extends Component {
         recipeID:3,
         userID:7,
         tutorialLink:'https://www.youtube.com/embed/TgA2y-Bgi3c'
-      }]
+      }],
+      increment:0
     }
   }
 
   createTutorialButton =(cell,row) => {
-
     return <button id={row.tutorialID} className="btn btn-outline-primary" onClick={() => this.tutorialVideo(row.tutorialID)}>Watch tutorial</button>;
   }
 
   tutorialVideo = (cell, row) => {
     console.log(this.state.tuts[cell-1].tutorialLink);
     ReactDOM.render(<Videothing videourl={this.state.tuts[cell-1].tutorialLink} />,document.getElementById('seeVideo'));
+    this.state.increment+=1;
   }
 
   render () {
