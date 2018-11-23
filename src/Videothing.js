@@ -7,7 +7,7 @@ class Videothing extends Component {
   constructor(props) {
     super(props);
     this.state = ({
-      // tutorialURL: this.props.videourl
+      tutorialURL: this.props.videourl
     })
 
   }
@@ -15,20 +15,10 @@ class Videothing extends Component {
     event.target.pauseVideo();
   }
   render() {
-    const opts = {
-      height: '390',
-      width: '640',
-      playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 1
-      }
-    };
+
     return (
       <div>
-      <YouTube
-      videoId="0LJb66aYtG8"
-      opts = {opts}
-      onReady={this.onReady}
-      />
+      <iframe width='700' height='450' src={this.state.tutorialURL} frameBorder='0' allow='acceleromter;autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
       </div>
     );
 

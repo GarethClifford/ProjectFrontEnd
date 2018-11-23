@@ -12,22 +12,22 @@ class Tutorials extends Component {
         tutorialID:1,
         recipeID:1,
         userID:1,
-        tutorialLink:'0LJb66aYtG8'
+        tutorialLink:'https://www.youtube.com/embed/0LJb66aYtG8'
       },{
         tutorialID:2,
         recipeID:36,
         userID:4,
-        tutorialLink:'WeLQpUC2IW4'
+        tutorialLink:'https://www.youtube.com/embed/WeLQpUC2IW4'
       },{
         tutorialID:3,
         recipeID:11,
         userID:39,
-        tutorialLink:'J94uO-urSTg'
+        tutorialLink:'https://www.youtube.com/embed/J94uO-urSTg'
       },{
         tutorialID:4,
         recipeID:3,
         userID:7,
-        tutorialLink:'TgA2y-Bgi3c'
+        tutorialLink:'https://www.youtube.com/embed/TgA2y-Bgi3c'
       }],
     }
   }
@@ -56,7 +56,7 @@ class Tutorials extends Component {
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
       </div><div style={{display:'inline'}}>
-
+      // <iframe width='700' height='450' src={this.state.tutorialURL} frameBorder='0' allow='acceleromter;autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
       </div></div>
     );
   }

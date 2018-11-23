@@ -23,7 +23,7 @@ class CreatingReviews extends Component {
       userID:document.getElementById('idUser').value,
       recipeID:document.getElementById('idRecipeNumber').value,
     }
-    axios.post('http://localhost:8081/MyPersonalProject/rest/reviews/createReview', data)
+    axios.post('http://104.199.39.236:8080/MyPersonalProject/rest/reviews/createReview', data)
          .then((response) => {
            console.log(response.data);
 

@@ -11,7 +11,7 @@ class RecipeUpdate extends Component {
         recipeMethod:document.getElementById('newMethod').value
       };
       event.preventDefault();
-      axios.put('http://localhost:8081/MyPersonalProject/rest/recipes/updateRecipe/' + document.getElementById('idOfRecipe').value, data).then((response) => {
+      axios.put('http://104.199.39.236:8080/MyPersonalProject/rest/recipes/updateRecipe/' + document.getElementById('idOfRecipe').value, data).then((response) => {
         console.log(response.data);
         window.location.reload();
       });

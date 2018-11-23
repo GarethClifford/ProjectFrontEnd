@@ -35,7 +35,7 @@ export default class RecipeTables extends Component {
   }
 
     getAllRecipes = () => {
-      axios.get('http://localhost:8081/MyPersonalProject/rest/recipes/getAll').then(response => {
+      axios.get('http://104.199.39.236:8080/MyPersonalProject/rest/recipes/getAll').then(response => {
         this.setState({
           infos: response.data
         });
@@ -45,7 +45,7 @@ export default class RecipeTables extends Component {
       return <button id={row.recipeID} className="btn btn-outline-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
     }
     deleteRecipe = (event) => {
-      axios.delete('http://localhost:8081/MyPersonalProject/rest/recipes/deleteRecipe/' + event).then((response) => {
+      axios.delete('http://104.199.39.236:8080/MyPersonalProject/rest/recipes/deleteRecipe/' + event).then((response) => {
       ReactDOM.render(<RecipeTables />,document.getElementById('creatingARecipe'));
       });
 
@@ -54,7 +54,7 @@ export default class RecipeTables extends Component {
       return <button id={row.recipeID} className="btn btn-outline-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
     }
     deleteReview = (event) => {
-      axios.delete('http://localhost:8081/MyPersonalProject/rest/reviews/deleteReview/' + event).then((reponse) => {
+      axios.delete('http://104.199.39.236:8080/MyPersonalProject/rest/reviews/deleteReview/' + event).then((reponse) => {
       ReactDOM.render(<RecipeTables />,document.getElementById('creatingARecipe'));
       });
 
@@ -66,7 +66,7 @@ export default class RecipeTables extends Component {
 
   render () {
     const options = {
-      expandRowBgColor: 'rgb(16,239,150)',
+      expandRowBgColor: 'rgb(244, 188, 66)',
       expandBy:'column',
       noDataText: 'There are currently no reviews for this recipe'
     }
