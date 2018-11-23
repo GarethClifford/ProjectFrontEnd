@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 import ReactDOM from 'react-dom';
-import UserCreate from './UserCreate.js'
+import CreateUser from './CreateUser.js'
 
 class AddUser extends Component {
 functionAddUser() {
-  ReactDOM.render(<UserCreate />,document.getElementById('makingAnAccount'));
+  ReactDOM.render(<CreateUser />,document.getElementById('creatingARecipe'));
 }
   render() {
     return (
