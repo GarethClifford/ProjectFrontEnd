@@ -74,6 +74,7 @@ export default class RecipeTables extends Component {
     return (
       <div className="recipeTable" style={{ width: '75%', margin:'auto' }}>
       <BootstrapTable data={this.state.infos}
+      id='recipeTableShow'
       height='650'
       scrollTop={ 'Bottom' }
       search

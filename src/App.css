@@ -47,3 +47,9 @@
 .stuff {
   align-items: center;
 }
+@media (max-width:768px) {
+  #recipeTableShow {
+    font-size:50%;
+    
+  }
+}
