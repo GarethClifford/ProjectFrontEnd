@@ -46,9 +46,7 @@ export default class RecipeTables extends Component {
     }
     deleteRecipe = (event) => {
       axios.delete('http://104.199.39.236:8080/MyPersonalProject/rest/recipes/deleteRecipe/' + event).then((response) => {
-              window.location.reload();
-      ReactDOM.render(<RecipeTables />,document.getElementById('creatingARecipe'));
-
+      window.location.reload();
       });
 
     }
@@ -76,6 +74,7 @@ export default class RecipeTables extends Component {
     return (
       <div className="recipeTable" style={{ width: '75%', margin:'auto' }}>
       <BootstrapTable data={this.state.infos}
+      id='recipeTableShow'
       height='650'
       scrollTop={ 'Bottom' }
       search
