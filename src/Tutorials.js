@@ -43,10 +43,6 @@ class Tutorials extends Component {
 
   componentDidMount(){
     console.log(this.state.videourl);
-
-  }
-
-  render () {
     if(this.state.videourl!=0){
       if(document.getElementById("playervideo").childElementCount!=0){
         document.getElementById('playervideo').removeChild(document.getElementById("videoimage"))
@@ -54,6 +50,10 @@ class Tutorials extends Component {
       console.log(this.state.videourl);
       ReactDOM.render(<Videothing id = "videoimage" videourl={this.state.videourl} />,document.getElementById('playvideo'));
     }
+  }
+
+  render () {
+
     return (
       <div className="userTable" style={{width:'30%', margin:'auto'}} >
       <div style={{float:'left'}}>
