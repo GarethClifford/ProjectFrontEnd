@@ -40,7 +40,7 @@ class Tutorials extends Component {
   tutorialVideo = (cell, row) => {
     this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
     for(var i = 1; i<5;i++){
-      var video = document.getElementById(i);
+      var video = document.getElementById("video"+i);
       if(cell=video.id){
         video.style.height = '450px';
         video.style.width = '700px';
@@ -70,10 +70,10 @@ class Tutorials extends Component {
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
       </div><div id='playvideo' style={{float:'left'}}>
-      <Videothing id = "1" videourl={'https://www.youtube.com/embed/0LJb66aYtG8'} />
-      <Videothing id = "2" videourl={'https://www.youtube.com/embed/WeLQpUC2IW4'} />
-      <Videothing id = "3" videourl={'https://www.youtube.com/embed/J94uO-urSTg'} />
-      <Videothing id = "4" videourl={'https://www.youtube.com/embed/TgA2y-Bgi3c'} />
+      <Videothing id = "video1" videourl={'https://www.youtube.com/embed/0LJb66aYtG8'} />
+      <Videothing id = "video2" videourl={'https://www.youtube.com/embed/WeLQpUC2IW4'} />
+      <Videothing id = "video3" videourl={'https://www.youtube.com/embed/J94uO-urSTg'} />
+      <Videothing id = "video4" videourl={'https://www.youtube.com/embed/TgA2y-Bgi3c'} />
       </div></div>
     );
   }
