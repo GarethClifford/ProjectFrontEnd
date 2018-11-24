@@ -38,12 +38,18 @@ class Tutorials extends Component {
   }
 
   tutorialVideo = (cell, row) => {
-    this.setState({ videourl: this.state.tuts[cell-1].tutorialLink });
-    for(var i = 1; i<5;i++){
-      var video = document.getElementById("video"+i);
-      if(cell=video) {
+    for(var i = 1; i < 5; i++) {
+      var id = 'video' + i;
+      var video = document.getElementById('id');
+      videoID = video.id.substring(5);
+      console.log(cell);
+      console.log(videoID);
+      if(cell == videoID) {
         video.style.height = '450px';
-        video.style.width = '700px';
+        video.style.widtht = '700px';
+      }else{
+        video.style.height = '0px';
+        video.style.widtht = '0px';
       }
     }
   }
