@@ -58,10 +58,10 @@ class Tutorials extends Component {
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
       </div><div id='playvideo'>
-      <Videothing id = "video1" videourl={'https://www.youtube.com/embed/0LJb66aYtG8'} style={{width:'100px', height:'100px'}}/>
-      <Videothing id = "video2" videourl={'https://www.youtube.com/embed/WeLQpUC2IW4'} style={{width:'100px', height:'100px'}} />
-      <Videothing id = "video3" videourl={'https://www.youtube.com/embed/J94uO-urSTg'} style={{width:'100px', height:'100px'}} />
-      <Videothing id = "video4" videourl={'https://www.youtube.com/embed/TgA2y-Bgi3c'} style={{width:'100px', height:'100px'}} />
+      <Videothing id = "video1" videourl={'https://www.youtube.com/watch?v=0LJb66aYtG8'} style={{width:'100px', height:'100px'}}/>
+      <Videothing id = "video2" videourl={'https://www.youtube.com/watch?v=WeLQpUC2IW4'} style={{width:'100px', height:'100px'}} />
+      <Videothing id = "video3" videourl={'https://www.youtube.com/watch?v=J94uO-urSTg'} style={{width:'100px', height:'100px'}} />
+      <Videothing id = "video4" videourl={'https://www.youtube.com/watch?v=TgA2y-Bgi3c'} style={{width:'100px', height:'100px'}} />
       </div></div>
     );
   }
