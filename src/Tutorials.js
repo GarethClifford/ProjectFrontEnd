@@ -36,7 +36,7 @@ class Tutorials extends Component {
     this.setState({
       IDOFVIDEO:this.state.tuts[number-1].tutorialLink
     });
-    console.log(this.tutorialVideo);
+    console.log(this.IDOFVIDEO);
     ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
   }
 
@@ -55,7 +55,7 @@ class Tutorials extends Component {
         <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
         </BootstrapTable>
         </div>
-        <div id='playvideo'class="col-md-8">
+        <div id='playvideo'className="col-md-8">
         </div>
         </div>
       </div>
