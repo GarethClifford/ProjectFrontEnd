@@ -16,8 +16,9 @@ class Videothing extends Component {
   render() {
     return (
       <div>
-      <iframe width='100' height='100' src={this.state.tutorialLINK} frameBorder='0' allow='autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
-
+        <YouTube
+      id={this.state.tutorialLINK}
+      />
       </div>
     );
 
