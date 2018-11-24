@@ -11,19 +11,19 @@ class Tutorials extends Component {
       tuts: [{
         tutorialID:1,
         description:"3 Ways to chop onions like a pro",
-        tutorialLink:'0LJb66aYtG8'
+        tutorialLink:'https://www.youtube.com/embed/0LJb66aYtG8'
       },{
         tutorialID:2,
         description:"Basic knife skills",
-        tutorialLink:'G-Fg7l7G1zw'
+        tutorialLink:'https://www.youtube.com/embed/G-Fg7l7G1zw'
       },{
         tutorialID:3,
         description:"The easist way to peal garlic",
-        tutorialLink:'Dtck2h6U62c'
+        tutorialLink:'https://www.youtube.com/embed/Dtck2h6U62c'
       },{
         tutorialID:4,
         description:"5 cooking essentials",
-        tutorialLink:'2aEANqAUdeM'
+        tutorialLink:'https://www.youtube.com/embed/2aEANqAUdeM'
       }],
       IDOFVIDEO:''
     }
