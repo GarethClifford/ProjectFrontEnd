@@ -33,7 +33,7 @@ class Tutorials extends Component {
   }
 
   createTutorialButton =(cell,row) => {
-    return <button id={row.tutorialID} className="btn btn-outline-primary" onClick={this.tutorialVideo(row.tutorialID).bind(this)}>Watch tutorial</button>;
+    return <button id={row.tutorialID} className="btn btn-outline-primary" onClick={() => this.tutorialVideo(row.tutorialID)}>Watch tutorial</button>;
   }
 
   tutorialVideo = (number) => {
