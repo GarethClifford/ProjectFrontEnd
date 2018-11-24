@@ -14,9 +14,19 @@ class Videothing extends Component {
     event.target.pauseVideo();
   }
   render() {
+    const opts = {
+   height: '390',
+   width: '640',
+   playerVars: { // https://developers.google.com/youtube/player_parameters
+     autoplay: 1
+   }
     return (
       <div id='youtubelink'>
-      <iframe id = {this.props.videoid} width='560' height='315' src='https://www.youtube.com/watch?v=0LJb66aYtG8' frameBorder='0' allow='autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
+      <iframe id = {this.props.videoid} width='560' height='315' src={this.state.tutorialLINK} frameBorder='0' allow='autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
+      <YouTube
+      videoId='0LJb66aYtG8'
+      opts={opts}
+      onReady={this.onReady} />
       </div>
     );
 
