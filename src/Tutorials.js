@@ -39,7 +39,7 @@ class Tutorials extends Component {
 
   tutorialVideo = (cell, row) => {
     this.setState({
-      videourl:cell.tutorialID
+      videourl:cell.tutorialLink
     });
     console.log(this.state.videourl);
   }
