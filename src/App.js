@@ -8,7 +8,7 @@ import AddReview from './AddReview.js';
 import GetRecipes from './GetRecipes';
 import GetUsers from './GetUsers';
 import TutorialTable from './TutorialTable';
-import Homepage from '.Homepage.js';
+import Homepage from './Homepage.js';
 
 
 
