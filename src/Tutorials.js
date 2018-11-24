@@ -14,7 +14,7 @@ class Tutorials extends Component {
         tutorialLink:'https://www.youtube.com/watch?v=0LJb66aYtG8'
       },{
         tutorialID:2,
-        description:"Basic knife skills"
+        description:"Basic knife skills",
         tutorialLink:'https://www.youtube.com/watch?v=G-Fg7l7G1zw'
       },{
         tutorialID:3,
