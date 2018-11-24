@@ -19,6 +19,8 @@ class App extends Component {
      <div className="App-navbar">
       <img src={home} className="App-logo" alt="logo" />
       <h1 style={{ position:'absolute', top:'5%', left:'25%' }}> My Personal Project </h1>
+      <br/>
+      <Homepage />
       <div style={{paddingleft: '6px'}}>
       <div className="App-button1" style={{position:'absolute', top:'30%', left:'25%'}} >
         <AddRecipes appRecipe="Add recipe" />
@@ -35,11 +37,10 @@ class App extends Component {
         <GetUsers />
         <br/>
         <UpdateRecipes />
-        <br/>
-        <Homepage />
       </div>
       </div>
     </div>
+    <br/>
     <div id='creatingARecipe'></div>
     </div>
     );

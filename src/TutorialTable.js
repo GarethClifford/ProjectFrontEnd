@@ -9,7 +9,7 @@ functionGetTutorials() {
   render() {
     return (
       <div>
-      <button className='btn btn-primary' onClick={() => this.functionGetTutorials()}>Tutorials</button>
+      <button className='btn btn-primary' onClick={() => this.functionGetTutorials()}>Some useful tutorials</button>
       </div>
     );
   }
