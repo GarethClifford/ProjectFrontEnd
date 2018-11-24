@@ -7,7 +7,7 @@ class Videothing extends Component {
   constructor(props) {
     super(props);
     this.state = ({
-      tutorialLINK: this.props.videourl
+      tutorialLINK: this.props.IDOFVIDEO
     })
   }
   onReady(event) {
@@ -24,7 +24,7 @@ class Videothing extends Component {
     return (
       <div id='youtubelink'>
       <YouTube
-      videoId='0LJb66aYtG8'
+      videoId={this.state.tutorialLINK}
       opts={opts}
       onReady={this.onReady} />
       </div>
