@@ -58,14 +58,15 @@ class Tutorials extends Component {
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
       </div><div id='playvideo' style={{float:'left'}}>
-      <Videothing id = "video1" videourl={'https://www.youtube.com/embed/0LJb66aYtG8'} />
-      <Videothing id = "video2" videourl={'https://www.youtube.com/embed/WeLQpUC2IW4'} />
-      <Videothing id = "video3" videourl={'https://www.youtube.com/embed/J94uO-urSTg'} />
-      <Videothing id = "video4" videourl={'https://www.youtube.com/embed/TgA2y-Bgi3c'} />
+
       </div></div>
     );
   }
 }
 
 export default Tutorials;
+// <Videothing id = "video1" videourl={'https://www.youtube.com/embed/0LJb66aYtG8'} />
+// <Videothing id = "video2" videourl={'https://www.youtube.com/embed/WeLQpUC2IW4'} />
+// <Videothing id = "video3" videourl={'https://www.youtube.com/embed/J94uO-urSTg'} />
+// <Videothing id = "video4" videourl={'https://www.youtube.com/embed/TgA2y-Bgi3c'} />
 // <iframe width="560" height="315" src=tutorialURL frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
