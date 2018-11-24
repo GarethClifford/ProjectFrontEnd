@@ -20,9 +20,9 @@ class Videothing extends Component {
    playerVars: { // https://developers.google.com/youtube/player_parameters
      autoplay: 1
    }
+ }
     return (
       <div id='youtubelink'>
-      <iframe id = {this.props.videoid} width='560' height='315' src={this.state.tutorialLINK} frameBorder='0' allow='autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
       <YouTube
       videoId='0LJb66aYtG8'
       opts={opts}
@@ -33,3 +33,5 @@ class Videothing extends Component {
 }
 
 export default Videothing;
+
+// <iframe id = {this.props.videoid} width='560' height='315' src={this.state.tutorialLINK} frameBorder='0' allow='autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
