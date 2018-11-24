@@ -33,10 +33,10 @@ class Tutorials extends Component {
   }
 
   tutorialVideo = (number) => {
-    this.state({
+    this.setState({
       IDOFVIDEO:this.state.tuts[number-1].tutorialLink
     });
-    this.state({
+    this.setState({
       IDOFVIDEO:this.state.tuts[number-1].tutorialLink
     });
     console.log(this.state.IDOFVIDEO);
