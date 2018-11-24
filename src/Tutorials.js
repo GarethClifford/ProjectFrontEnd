@@ -28,8 +28,7 @@ class Tutorials extends Component {
         recipeID:3,
         userID:7,
         tutorialLink:'https://www.youtube.com/embed/TgA2y-Bgi3c'
-      }],
-      videourl:0
+      }]
     }
   }
 
@@ -38,7 +37,7 @@ class Tutorials extends Component {
   }
 
   tutorialVideo = (cell, row) => {
-    this.setState({
+    this.state({
       videourl:row.tutorialID
     });
     console.log(this.state.videourl);
