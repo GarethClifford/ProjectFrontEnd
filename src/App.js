@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
     <div >
-     <div className="App-navbar">
+     <div className="App-navbar" style={{overflow:auto}}>
       <img src={home} className="App-logo" alt="logo" />
       <h1 style={{ position:'absolute', top:'5%', left:'25%' }}> My Personal Project <Homepage /> </h1>
       <div style={{paddingleft: '6px'}}>
