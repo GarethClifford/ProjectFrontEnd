@@ -24,7 +24,8 @@ class Tutorials extends Component {
         tutorialID:4,
         descriptoon:"5 cooking essentials",
         tutorialLink:'2aEANqAUdeM'
-      }]
+      }],
+      IDOFVIDEO:""
     }
   }
 
