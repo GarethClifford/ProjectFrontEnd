@@ -38,22 +38,11 @@ class Tutorials extends Component {
   }
 
   tutorialVideo = (cell, row) => {
-    for(var i = 1; i < 5; i++) {
-      var id = 'video'+i;
-      var video = document.getElementById('video1');
-      var videoId = video.id.substr(5);
-      console.log(cell);
-      console.log(videoId);
-      if(cell == videoId) {
-        video.style.height = '450px';
-        video.style.widtht = '700px';
-      }else{
-        video.style.height = '0px';
-        video.style.widtht = '0px';
-      }
-    }
+    this.setState({
+      videourl:row.tutorialID
+    });
+    console.log(this.state.videourl);
   }
-
   render () {
 
     return (
