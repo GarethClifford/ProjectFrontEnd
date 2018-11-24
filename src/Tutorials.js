@@ -56,10 +56,6 @@ ReactDOM.render(<Videothing videourl={this.tuts[number-1].tutorialLink}/>,docume
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
       </div><div id='playvideo'>
-      <Videothing id = "video1" videourl={'https://www.youtube.com/watch?v=0LJb66aYtG8'}} />
-      <Videothing id = "video2" videourl={'https://www.youtube.com/watch?v=WeLQpUC2IW4'} />
-      <Videothing id = "video3" videourl={'https://www.youtube.com/watch?v=J94uO-urSTg'} />
-      <Videothing id = "video4" videourl={'https://www.youtube.com/watch?v=TgA2y-Bgi3c'} />
       </div></div>
     );
   }
