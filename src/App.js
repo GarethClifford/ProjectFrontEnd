@@ -20,7 +20,7 @@ class App extends Component {
       <img src={home} className="App-logo" alt="logo" />
       <h1 style={{ position:'absolute', top:'5%', left:'25%' }}> My Personal Project <Homepage /> </h1>
       <div style={{paddingleft: '6px'}}>
-style="font-size:5vw;"
+
       <div className="App-button1" style={{position:'absolute',top:'30%', left:'25%', font-size:'5vw' }} >
         <AddRecipes appRecipe="Add recipe" />
         <br/>
