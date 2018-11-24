@@ -28,7 +28,6 @@ class Videothing extends Component {
       opts={opts}
       onReady={this.onReady} />
       </div>
-    );
 
   }
 }
