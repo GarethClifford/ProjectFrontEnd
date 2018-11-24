@@ -8,6 +8,7 @@ import AddReview from './AddReview.js';
 import GetRecipes from './GetRecipes';
 import GetUsers from './GetUsers';
 import TutorialTable from './TutorialTable';
+import Homepage from '.Homepage.js';
 
 
 
@@ -34,6 +35,8 @@ class App extends Component {
         <GetUsers />
         <br/>
         <UpdateRecipes />
+        <br/>
+        <Homepage />
       </div>
       </div>
     </div>
