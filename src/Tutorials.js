@@ -24,8 +24,7 @@ class Tutorials extends Component {
         tutorialID:4,
         descriptoon:"5 cooking essentials",
         tutorialLink:'2aEANqAUdeM'
-      }],
-      IDOFVIDEO:''
+      }]
     }
   }
 
@@ -34,7 +33,7 @@ class Tutorials extends Component {
   }
 
   tutorialVideo = (number) => {
-    this.setState({
+    this.state({
       IDOFVIDEO:this.state.tuts[number-1].tutorialLink
     });
     console.log(this.state.IDOFVIDEO);
