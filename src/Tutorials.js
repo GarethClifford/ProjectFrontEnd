@@ -11,19 +11,19 @@ class Tutorials extends Component {
       tuts: [{
         tutorialID:1,
         description:"3 Ways to chop onions like a pro",
-        tutorialLink:'https://www.youtube.com/watch?v=0LJb66aYtG8'
+        tutorialLink:'0LJb66aYtG8'
       },{
         tutorialID:2,
         description:"Basic knife skills",
-        tutorialLink:'https://www.youtube.com/watch?v=G-Fg7l7G1zw'
+        tutorialLink:'G-Fg7l7G1zw'
       },{
         tutorialID:3,
         description:"The easist way to peal garlic",
-        tutorialLink:'https://www.youtube.com/watch?v=Dtck2h6U62c'
+        tutorialLink:'Dtck2h6U62c'
       },{
         tutorialID:4,
         descriptoon:"5 cooking essentials",
-        tutorialLink:'https://www.youtube.com/watch?v=2aEANqAUdeM'
+        tutorialLink:'2aEANqAUdeM'
       }]
     }
   }
@@ -33,7 +33,11 @@ class Tutorials extends Component {
   }
 
   tutorialVideo = (number) => {
-ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
+    this.setState({
+      IDOFVIDEO:this.state.tuts[number-1].tutorialLink
+    });
+    console.log(this.tutorialVideo);
+    ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
   }
 
   render () {
