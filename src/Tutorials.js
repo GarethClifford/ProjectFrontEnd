@@ -22,9 +22,10 @@ class Tutorials extends Component {
         tutorialLink:'Dtck2h6U62c'
       },{
         tutorialID:4,
-        descriptoon:"5 cooking essentials",
+        description:"5 cooking essentials",
         tutorialLink:'2aEANqAUdeM'
-      }]
+      }],
+      IDOFVIDEO:''
     }
   }
 
