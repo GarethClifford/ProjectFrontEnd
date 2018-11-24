@@ -28,8 +28,7 @@ class Tutorials extends Component {
         recipeID:3,
         userID:7,
         tutorialLink:'https://www.youtube.com/watch?v=TgA2y-Bgi3c'
-      }],
-      videourl:""
+      }]
     }
   }
 
