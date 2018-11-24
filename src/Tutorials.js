@@ -43,9 +43,9 @@ ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
   render () {
 
     return (
-      <div className="container userTable" style={{width:'30%', margin:'auto'}} >
+      <div className="container-fluid userTable" style={{width:'30%', margin:'auto'}} >
       <div className="row">
-        <div className="col-xs-6">
+        <div className="col-md-4">
         <BootstrapTable data={this.state.tuts}
         hover
         striped
@@ -56,7 +56,7 @@ ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
         <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
         </BootstrapTable>
         </div>
-        <div id='playvideo'class="col-xs-6">
+        <div id='playvideo'class="col-md-8">
         </div>
         </div>
       </div>
