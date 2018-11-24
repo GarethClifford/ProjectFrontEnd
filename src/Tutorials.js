@@ -39,7 +39,7 @@ class Tutorials extends Component {
 
   tutorialVideo = (cell, row) => {
     for(var i = 1; i < 5; i++) {
-      var id = 'video' + i;
+      var id = 'video'+i;
       var video = document.getElementById(id);
       var videoId = video.id.substring(5);
       console.log(cell);
@@ -52,10 +52,6 @@ class Tutorials extends Component {
         video.style.widtht = '0px';
       }
     }
-  }
-
-  componentDidMount(){
-    console.log(this.state.videourl);
   }
 
   render () {
