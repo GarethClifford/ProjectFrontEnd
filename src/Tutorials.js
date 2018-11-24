@@ -37,12 +37,23 @@ class Tutorials extends Component {
     return <button id={row.tutorialID} className="btn btn-outline-primary" onClick={() => this.tutorialVideo(row.tutorialID)}>Watch tutorial</button>;
   }
 
-  tutorialVideo = (number) => {
-    this.setState({
-      videourl:this.state.tuts[number-1].tutorialLink
-    });
-
+  tutorialVideo = (cell, row) => {
+    for(var i = 1; i<5;i++){
+      var id = "video"+i;
+      var video = document.getElementById(id);
+      var videoId = video.id.substring(5);
+      console.log(cell);
+      console.log(videoId);
+      if(cell==videoId) {
+        video.style.height = '450px';
+        video.style.width = '700px';
+      }else{
+        video.style.height = '0px';
+        video.style.width = '0px';
+      }
+    }
   }
+  
   render () {
 
     return (
