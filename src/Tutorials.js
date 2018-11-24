@@ -10,24 +10,20 @@ class Tutorials extends Component {
     this.state = {
       tuts: [{
         tutorialID:1,
-        recipeID:1,
-        userID:1,
+        description:"3 Ways to chop onions like a pro",
         tutorialLink:'https://www.youtube.com/watch?v=0LJb66aYtG8'
       },{
         tutorialID:2,
-        recipeID:36,
-        userID:4,
-        tutorialLink:'https://www.youtube.com/watch?v=WeLQpUC2IW4'
+        description:"Basic knife skills"
+        tutorialLink:'https://www.youtube.com/watch?v=G-Fg7l7G1zw'
       },{
         tutorialID:3,
-        recipeID:11,
-        userID:39,
-        tutorialLink:'https://www.youtube.com/watch?v=J94uO-urSTg'
+        description:"The easist way to peal garlic",
+        tutorialLink:'https://www.youtube.com/watch?v=Dtck2h6U62c'
       },{
         tutorialID:4,
-        recipeID:3,
-        userID:7,
-        tutorialLink:'https://www.youtube.com/watch?v=TgA2y-Bgi3c'
+        descriptoon:"5 cooking essentials",
+        tutorialLink:'https://www.youtube.com/watch?v=2aEANqAUdeM'
       }]
     }
   }
@@ -51,8 +47,7 @@ ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
         striped
         search>
         <TableHeaderColumn Column width={'7%'} dataField='tutorialID' isKey>ID</TableHeaderColumn>
-        <TableHeaderColumn Column width={'13%'} dataField='recipeID'>Recipe ID</TableHeaderColumn>
-        <TableHeaderColumn Column width={'13%'} dataField='userID' >User ID</TableHeaderColumn>
+        <TableHeaderColumn Column width={'13%'} dataField='description'>Description</TableHeaderColumn>
         <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
         </BootstrapTable>
         </div>
