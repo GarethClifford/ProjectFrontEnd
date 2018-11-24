@@ -43,19 +43,23 @@ ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
   render () {
 
     return (
-      <div className="userTable" style={{width:'30%', margin:'auto'}} >
-      <div style={{float:'left'}}>
-      <BootstrapTable data={this.state.tuts}
-      hover
-      striped
-      search>
-      <TableHeaderColumn Column width={'7%'} dataField='tutorialID' isKey>ID</TableHeaderColumn>
-      <TableHeaderColumn Column width={'13%'} dataField='recipeID'>Recipe ID</TableHeaderColumn>
-      <TableHeaderColumn Column width={'13%'} dataField='userID' >User ID</TableHeaderColumn>
-      <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
-      </BootstrapTable>
-      </div><div id='playvideo'>
-      </div></div>
+      <div class="container" className="userTable" style={{width:'30%', margin:'auto'}} >
+      <div class="row">
+        <div class="col-xs-6">
+        <BootstrapTable data={this.state.tuts}
+        hover
+        striped
+        search>
+        <TableHeaderColumn Column width={'7%'} dataField='tutorialID' isKey>ID</TableHeaderColumn>
+        <TableHeaderColumn Column width={'13%'} dataField='recipeID'>Recipe ID</TableHeaderColumn>
+        <TableHeaderColumn Column width={'13%'} dataField='userID' >User ID</TableHeaderColumn>
+        <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
+        </BootstrapTable>
+        </div>
+        <div id='playvideo'class="col-xs-6">
+        </div>
+        </div>
+      </div>
     );
   }
 }
