@@ -43,9 +43,9 @@ ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
   render () {
 
     return (
-      <div class="container" className="userTable" style={{width:'30%', margin:'auto'}} >
-      <div class="row">
-        <div class="col-xs-6">
+      <div className="container userTable" style={{width:'30%', margin:'auto'}} >
+      <div className="row">
+        <div className="col-xs-6">
         <BootstrapTable data={this.state.tuts}
         hover
         striped
