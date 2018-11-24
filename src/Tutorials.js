@@ -47,7 +47,7 @@ ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
         striped
         search>
         <TableHeaderColumn Column width={'7%'} dataField='tutorialID' isKey>ID</TableHeaderColumn>
-        <TableHeaderColumn Column width={'13%'} dataField='description'>Description</TableHeaderColumn>
+        <TableHeaderColumn tdStyle={{ whiteSpace: 'unset'}} Column width={'30%'} dataField='description'>Description</TableHeaderColumn>
         <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
         </BootstrapTable>
         </div>
