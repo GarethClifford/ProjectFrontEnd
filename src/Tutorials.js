@@ -41,7 +41,7 @@ class Tutorials extends Component {
     for(var i = 1; i<5;i++){
       var id = "video"+i;
       var video = document.getElementById(id);
-      var videoId = video.id.substring(5);
+      var videoId = id.substring(5);
       console.log(cell);
       console.log(videoId);
       if(cell==videoId) {
