@@ -19,8 +19,7 @@ class Videothing extends Component {
    width: '640',
    playerVars: { // https://developers.google.com/youtube/player_parameters
      autoplay: 1
-   }
- }
+   };
     return (
       <div id='youtubelink'>
       <YouTube
