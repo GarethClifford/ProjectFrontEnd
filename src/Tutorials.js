@@ -36,7 +36,7 @@ class Tutorials extends Component {
   tutorialVideo = (number) => {
 
         this.setState({
-          IDOFVIDEO:this.state.tuts[row.tutorialID-1].tutorialLink
+          IDOFVIDEO:this.state.tuts[number-1].tutorialLink
         });
     console.log(this.state.IDOFVIDEO);
     ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
