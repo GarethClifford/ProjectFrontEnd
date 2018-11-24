@@ -41,8 +41,7 @@ class Tutorials extends Component {
     this.setState({
       videourl:this.state.tuts[number-1].tutorialLink
     });
-    document.getElementById('playvideo').innerHTML="";
-    ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
+
   }
   render () {
 
@@ -59,12 +58,18 @@ class Tutorials extends Component {
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
       </div><div id='playvideo'>
+      <Videothing id = "video1" videourl={'https://www.youtube.com/embed/0LJb66aYtG8'} style={{width:'100px', height:'100px'}}/>
+      <Videothing id = "video2" videourl={'https://www.youtube.com/embed/WeLQpUC2IW4'} style={{width:'100px', height:'100px'}} />
+      <Videothing id = "video3" videourl={'https://www.youtube.com/embed/J94uO-urSTg'} style={{width:'100px', height:'100px'}} />
+      <Videothing id = "video4" videourl={'https://www.youtube.com/embed/TgA2y-Bgi3c'} style={{width:'100px', height:'100px'}} />
       </div></div>
     );
   }
 }
 
 export default Tutorials;
+// document.getElementById('playvideo').innerHTML="";
+// ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
 // <Videothing id = "video1" videourl={'https://www.youtube.com/embed/0LJb66aYtG8'} />
 // <Videothing id = "video2" videourl={'https://www.youtube.com/embed/WeLQpUC2IW4'} />
 // <Videothing id = "video3" videourl={'https://www.youtube.com/embed/J94uO-urSTg'} />
