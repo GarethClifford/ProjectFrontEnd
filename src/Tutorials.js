@@ -41,10 +41,10 @@ class Tutorials extends Component {
     for(var i = 1; i < 5; i++) {
       var id = 'video' + i;
       var video = document.getElementById(id);
-      videoID = video.id.substring(5);
+      videoId = video.id.substring(5);
       console.log(cell);
-      console.log(videoID);
-      if(cell == videoID) {
+      console.log(videoId);
+      if(cell == videoId) {
         video.style.height = '450px';
         video.style.widtht = '700px';
       }else{
