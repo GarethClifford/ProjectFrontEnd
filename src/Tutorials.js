@@ -45,7 +45,7 @@ class Tutorials extends Component {
       console.log(cell);
       console.log(videoId);
       if(cell==videoId) {
-        video.style.height = '450px';
+        document.getElementById(id).style.height = '450px';
         video.style.width = '700px';
       }else{
         video.style.height = '1px';
