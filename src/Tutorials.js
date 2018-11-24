@@ -48,12 +48,12 @@ class Tutorials extends Component {
         video.style.height = '450px';
         video.style.width = '700px';
       }else{
-        video.style.height = '0px';
-        video.style.width = '0px';
+        video.style.height = '1px';
+        video.style.width = '1px';
       }
     }
   }
-  
+
   render () {
 
     return (
