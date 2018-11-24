@@ -43,7 +43,7 @@ ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
   render () {
 
     return (
-      <div className="container-fluid userTable" style={{width:'30%', margin:'auto'}} >
+      <div className="container-fluid userTable" >
       <div className="row">
         <div className="col-md-4">
         <BootstrapTable data={this.state.tuts}
