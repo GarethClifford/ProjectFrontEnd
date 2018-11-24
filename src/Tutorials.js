@@ -30,16 +30,13 @@ class Tutorials extends Component {
   }
 
   createTutorialButton =(cell,row) => {
+    this.setState({
+      IDOFVIDEO:this.state.tuts[row.tutorialID-1].tutorialLink
+    });
     return <button id={row.tutorialID} className="btn btn-outline-primary" onClick={() => this.tutorialVideo(row.tutorialID)}>Watch tutorial</button>;
   }
 
   tutorialVideo = (number) => {
-    this.setState({
-      IDOFVIDEO:this.state.tuts[number-1].tutorialLink
-    });
-    this.setState({
-      IDOFVIDEO:this.state.tuts[number-1].tutorialLink
-    });
     console.log(this.state.IDOFVIDEO);
     ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
   }
