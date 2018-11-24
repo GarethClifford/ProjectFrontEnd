@@ -12,7 +12,7 @@ class Tutorials extends Component {
         tutorialID:1,
         recipeID:1,
         userID:1,
-        tutorialLink:'https://www.youtube.com/embed/0LJb66aYtG8'
+        tutorialLink:'0LJb66aYtG8'
       },{
         tutorialID:2,
         recipeID:36,
