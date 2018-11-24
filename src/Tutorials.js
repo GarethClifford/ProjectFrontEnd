@@ -12,22 +12,22 @@ class Tutorials extends Component {
         tutorialID:1,
         recipeID:1,
         userID:1,
-        tutorialLink:'0LJb66aYtG8'
+        tutorialLink:'https://www.youtube.com/watch?v=0LJb66aYtG8'
       },{
         tutorialID:2,
         recipeID:36,
         userID:4,
-        tutorialLink:'https://www.youtube.com/embed/WeLQpUC2IW4'
+        tutorialLink:'https://www.youtube.com/watch?v=WeLQpUC2IW4'
       },{
         tutorialID:3,
         recipeID:11,
         userID:39,
-        tutorialLink:'https://www.youtube.com/embed/J94uO-urSTg'
+        tutorialLink:'https://www.youtube.com/watch?v=J94uO-urSTg'
       },{
         tutorialID:4,
         recipeID:3,
         userID:7,
-        tutorialLink:'https://www.youtube.com/embed/TgA2y-Bgi3c'
+        tutorialLink:'https://www.youtube.com/watch?v=TgA2y-Bgi3c'
       }],
       videourl:""
     }
