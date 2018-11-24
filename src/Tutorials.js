@@ -38,7 +38,7 @@ class Tutorials extends Component {
 
   tutorialVideo = (cell, row) => {
     this.state({
-      videourl:row.tutorialID
+      videourl:row.tutorialID.value
     });
     console.log(this.state.videourl);
   }
