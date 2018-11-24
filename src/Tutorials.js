@@ -34,24 +34,11 @@ class Tutorials extends Component {
   }
 
   createTutorialButton =(cell,row) => {
-    return <button id={row.tutorialID} className="btn btn-outline-primary" onClick={() => this.tutorialVideo(row.tutorialID)}>Watch tutorial</button>;
+    return <button id={row.tutorialID} className="btn btn-outline-primary" onClick={this.tutorialVideo(row.tutorialID).bind(this)}>Watch tutorial</button>;
   }
 
-  tutorialVideo = (cell, row) => {
-    for(var i = 1; i<5;i++){
-      var id = "video"+i;
-      var video = document.getElementById(id);
-      var videoId = id.substring(5);
-      console.log(cell);
-      console.log(videoId);
-      if(cell==videoId) {
-        document.getElementById(id).style.height = '450px';
-        video.style.width = '700px';
-      }else{
-        video.style.height = '1px';
-        video.style.width = '1px';
-      }
-    }
+  tutorialVideo = (number) => {
+ReactDOM.render(<Videothing videourl={this.tuts[number-1].tutorialLink}/>,document.getElementById('playvideo'));
   }
 
   render () {
@@ -69,7 +56,7 @@ class Tutorials extends Component {
       <TableHeaderColumn Column width={'30%'} dataFormat={this.createTutorialButton} >Tutorial link</TableHeaderColumn>
       </BootstrapTable>
       </div><div id='playvideo'>
-      <Videothing id = "video1" videourl={'https://www.youtube.com/watch?v=0LJb66aYtG8'} />
+      <Videothing id = "video1" videourl={'https://www.youtube.com/watch?v=0LJb66aYtG8'}} />
       <Videothing id = "video2" videourl={'https://www.youtube.com/watch?v=WeLQpUC2IW4'} />
       <Videothing id = "video3" videourl={'https://www.youtube.com/watch?v=J94uO-urSTg'} />
       <Videothing id = "video4" videourl={'https://www.youtube.com/watch?v=TgA2y-Bgi3c'} />
