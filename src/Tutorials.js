@@ -25,7 +25,7 @@ class Tutorials extends Component {
         descriptoon:"5 cooking essentials",
         tutorialLink:'2aEANqAUdeM'
       }],
-      IDOFVIDEO:""
+      IDOFVIDEO:
     }
   }
 
