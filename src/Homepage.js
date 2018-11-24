@@ -11,7 +11,7 @@ class Homepage extends Component {
   render() {
     return (
       <div>
-      <button className="btn btn-dark btn-lg" onClick={this.functionHomeScreen}>Home</button>
+      <button className="btn btn-info" onClick={this.functionHomeScreen}>Home</button>
       </div>
     );
   }
