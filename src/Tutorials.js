@@ -33,10 +33,10 @@ class Tutorials extends Component {
     return <button id={row.tutorialID} className="btn btn-outline-primary" onClick={() => this.tutorialVideo(row.tutorialID)}>Watch tutorial</button>;
   }
 
-  tutorialVideo = (number) => {
+  tutorialVideo = (cell, row) => {
 
         this.setState({
-          IDOFVIDEO:this.state.tuts[number-1].tutorialLink
+          IDOFVIDEO:this.state.tuts[cell.tutorialID-1].tutorialLink
         });
     console.log(this.state.IDOFVIDEO);
     ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
