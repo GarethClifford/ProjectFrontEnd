@@ -41,7 +41,7 @@ class Tutorials extends Component {
     this.setState({
       videourl:this.state.tuts[number-1].tutorialLink
     });
-    document.getElementById('playvideo').empty();
+    document.getElementById('playvideo').innerHTML='';
     ReactDOM.render(<Videothing />,document.getElementById('playvideo'));
   }
   render () {
