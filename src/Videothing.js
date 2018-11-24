@@ -23,15 +23,16 @@ class Videothing extends Component {
  };
     return (
       <div id='youtubelink'>
-      <YouTube
-      videoId={this.state.IDOFVIDEO}
-      opts={opts}
-      onReady={this.onReady} />
-      </div>
+      <iframe id = {this.props.videoid} width='560' height='315' src={this.state.tutorialLINK} frameBorder='0' allow='autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
     );
   }
 }
 
 export default Videothing;
 
-// <iframe id = {this.props.videoid} width='560' height='315' src={this.state.tutorialLINK} frameBorder='0' allow='autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
+
+// <YouTube
+// videoId={this.state.IDOFVIDEO}
+// opts={opts}
+// onReady={this.onReady} />
+// </div>
