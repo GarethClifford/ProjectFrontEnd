@@ -40,7 +40,7 @@ class Tutorials extends Component {
   tutorialVideo = (cell, row) => {
     for(var i = 1; i < 5; i++) {
       var id = 'video'+i;
-      var video = document.getElementById(id);
+      var video = document.getElementById('video1');
       var videoId = video.id.substr(5);
       console.log(cell);
       console.log(videoId);
