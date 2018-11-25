@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { BootstrapTable, TableHeaderColumn, BSTable } from 'react-bootstrap-table';
+import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import Videothing from './Videothing.js';
 import ReactDOM from 'react-dom';
-import YouTube from 'react-youtube';
 
 class Tutorials extends Component {
   constructor(props){

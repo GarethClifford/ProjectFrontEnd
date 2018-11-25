@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import Tutorials from './Tutorials.js'
-import YouTube from 'react-youtube';
+// import ReactDOM from 'react-dom';
+// import Tutorials from './Tutorials.js'
+// import YouTube from 'react-youtube';
 
 class Videothing extends Component {
   constructor(props) {
