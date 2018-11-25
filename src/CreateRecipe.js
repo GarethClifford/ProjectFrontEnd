@@ -4,7 +4,7 @@ import UserTables from './UserTables.js';
 import ReactDOM from 'react-dom';
 import CreateUser from './CreateUser';
 
-class GetAllRecipes extends Component {
+class CreateRecipe extends Component {
     getAllUsers = () => {
       ReactDOM.render(<UserTables />,document.getElementById('creatingARecipe'));
     }
@@ -75,4 +75,4 @@ render() {
 }
 }
 
-export default GetAllRecipes;
+export default CreateRecipe;

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
-// import Tutorials from './Tutorials.js'
-// import YouTube from 'react-youtube';
 
-class Videothing extends Component {
+class Video extends Component {
   constructor(props) {
     super(props);
     this.state = ({
@@ -23,7 +20,7 @@ class Videothing extends Component {
   }
 }
 
-export default Videothing;
+export default Video;
 
 
 // <YouTube
