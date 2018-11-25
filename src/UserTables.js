@@ -19,9 +19,6 @@ class UserTables extends Component {
         peoples: response.data
       });
     });
-    console.log(port);
-    console.log(ipAddress);
-    console.log(warFile);
     console.log(root);
   }
   deleteUser = (event) => {
