@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
-import {port, ipAddress, warFile} from './SettingUpIPURL.js'
+import {root} from './SettingUpIPURL.js'
 
 class UserTables extends Component {
   constructor(props){
@@ -22,6 +22,7 @@ class UserTables extends Component {
     console.log(port);
     console.log(ipAddress);
     console.log(warFile);
+    console.log(root);
   }
   deleteUser = (event) => {
     axios.delete('http://104.199.39.236:8080/MyPersonalProject/rest/users/deleteUser/' + event).then((response) => {
