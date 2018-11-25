@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 class CreateUser extends Component {
-  constructor(props) {
-    super(props);
-    }
     getAllUsers = () => {
       ReactDOM.render(<UserTables />,document.getElementById('creatingARecipe'));
     }

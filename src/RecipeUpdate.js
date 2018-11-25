@@ -25,7 +25,6 @@ class RecipeUpdate extends Component {
       document.getElementById('countMessage1').innerHTML = '0 /' + maxText;
       document.getElementById('newIngredients').onkeyup = function() {
         var textLength = document.getElementById('newIngredients').value.length;
-        var textRemaining = maxText - textLength;
         document.getElementById('countMessage1').innerHTML = textLength + ' / ' + maxText
       }
 
@@ -35,7 +34,6 @@ class RecipeUpdate extends Component {
       document.getElementById('countMessage2').innerHTML = '0 /' + maxText;
       document.getElementById('newMethod').onkeyup = function() {
         var textLength = document.getElementById('newMethod').value.length;
-        var textRemaining = maxText - textLength;
         document.getElementById('countMessage2').innerHTML = textLength + ' / ' + maxText
       }
 

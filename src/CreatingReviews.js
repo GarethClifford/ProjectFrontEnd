@@ -6,9 +6,6 @@ import CreateUser from './CreateUser';
 import RecipeTables from './RecipeTables';
 
 class CreatingReviews extends Component {
-  constructor(props) {
-    super(props);
-    }
     getAllUsers = () => {
       ReactDOM.render(<UserTables />,document.getElementById('creatingARecipe'));
     }
@@ -43,7 +40,6 @@ countCharacter = () => {
   document.getElementById('countMessage').innerHTML = '0 /' + maxText;
   document.getElementById('commentsReview').onkeyup = function() {
     var textLength = document.getElementById('commentsReview').value.length;
-    var textRemaining = maxText - textLength;
     document.getElementById('countMessage').innerHTML = textLength + ' / ' + maxText
   }
 }
