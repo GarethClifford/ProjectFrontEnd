@@ -5,7 +5,7 @@ import CreateReviews from './CreateReviews.js';
 
 class AddReview extends Component {
 functionAddRecipes() {
-  ReactDOM.render(<CreateReviews />,document.getElementById('creatingARecipe'));
+  ReactDOM.render(<CreateReviews />,document.getElementById('contentOfDiv'));
 }
   render() {
     return (

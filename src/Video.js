@@ -21,17 +21,3 @@ class Video extends Component {
 }
 
 export default Video;
-
-
-// <YouTube
-// videoId={this.state.IDOFVIDEO}
-// opts={opts}
-// onReady={this.onReady} />
-
-// const opts = {
-//   height: '390',
-//   width: '640',
-//   playerVars: { // https://developers.google.com/youtube/player_parameters
-//     autoplay: 1
-//   }
-// };

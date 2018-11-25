@@ -4,7 +4,7 @@ import CreateUser from './CreateUser.js'
 
 class AddUser extends Component {
 functionAddUser() {
-  ReactDOM.render(<CreateUser />,document.getElementById('creatingARecipe'));
+  ReactDOM.render(<CreateUser />,document.getElementById('contentOfDiv'));
 }
   render() {
     return (

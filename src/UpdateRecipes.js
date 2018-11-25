@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import RecipeUpdate from './RecipeUpdate.js';
 
 class UpdateRecipes extends Component {
-functionUpdateRecipes() {
-  ReactDOM.render(<RecipeUpdate />,document.getElementById('creatingARecipe'));
+functionRecipeUpdate() {
+  ReactDOM.render(<RecipeUpdate />,document.getElementById('contentOfDiv'));
 }
   render() {
     return (
       <div>
-      <button className="btn btn-warning" onClick={this.functionUpdateRecipes}>Update Recipe</button>
+      <button className="btn btn-warning" onClick={this.functionRecipeUpdate}>Update Recipe</button>
       </div>
     );
   }

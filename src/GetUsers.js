@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import UserTables from './UserTables.js'
 
 class GetUsers extends Component {
-functionGetAllUsers() {
-  ReactDOM.render(<UserTables />,document.getElementById('creatingARecipe'));
+functionGetUserTables() {
+  ReactDOM.render(<UserTables />,document.getElementById('contentOfDiv'));
 }
   render() {
     return (
       <div>
-      <button className='btn btn' onClick={() => this.functionGetAllUsers()}>Get users</button>
+      <button className='btn btn' onClick={() => this.functionGetUserTables()}>Get users</button>
       </div>
     );
   }

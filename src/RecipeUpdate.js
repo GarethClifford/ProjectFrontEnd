@@ -17,24 +17,24 @@ class RecipeUpdate extends Component {
       });
     }
     componentDidMount() {
-      this.countCharacter1();
-      this.countCharacter2();
+      this.countCharacterForIngredients();
+      this.countCharacterForMethod();
     }
-    countCharacter1 = () => {
+    countCharacterForIngredients = () => {
       var maxText = 5000;
-      document.getElementById('countMessage1').innerHTML = '0 /' + maxText;
+      document.getElementById('ingredientsContent').innerHTML = '0 /' + maxText;
       document.getElementById('newIngredients').onkeyup = function() {
         var textLength = document.getElementById('newIngredients').value.length;
-        document.getElementById('countMessage1').innerHTML = textLength + ' / ' + maxText
+        document.getElementById('ingredientsContent').innerHTML = textLength + ' / ' + maxText
       }
 
     }
-    countCharacter2 = () => {
+    countCharacterForMethod = () => {
       var maxText = 5000;
-      document.getElementById('countMessage2').innerHTML = '0 /' + maxText;
+      document.getElementById('methodContent').innerHTML = '0 /' + maxText;
       document.getElementById('newMethod').onkeyup = function() {
         var textLength = document.getElementById('newMethod').value.length;
-        document.getElementById('countMessage2').innerHTML = textLength + ' / ' + maxText
+        document.getElementById('methodContent').innerHTML = textLength + ' / ' + maxText
       }
 
     }
@@ -52,11 +52,11 @@ Enter the new name
 Enter the new ingredients
 <br/>
 <textarea id = "newIngredients"  type = "text"placeholder = "Ingredients" className ="form-control" style={{width:'500px'}} rows ='3' maxLength="5000"/>
-<h6 className="pull-right" id="countMessage1" >''</h6>
+<h6 className="pull-right" id="ingredientsContent" >''</h6>
 Enter the new method (Max of 5000 characeters)
 <br/>
 <textarea id ="newMethod" type ="text" placeholder = "Method" className ="form-control" style={{width:'700px'}} rows ='4' maxLength="5000" />
-<h6 className="pull-right" id="countMessage2">''</h6>
+<h6 className="pull-right" id="methodContent">''</h6>
 <br/>
 <button className="btn btn-success" onClick={this.updateRecipe}>Update recipe</button>
 </div>

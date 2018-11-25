@@ -7,7 +7,7 @@ class TutorialTable extends Component {
   constructor(props){
     super(props);
     this.state = {
-      tuts: [{
+      tutorialInfo: [{
         tutorialID:1,
         description:"3 Ways to chop onions like a pro",
         tutorialLink:'https://www.youtube.com/embed/0LJb66aYtG8'
@@ -23,8 +23,7 @@ class TutorialTable extends Component {
         tutorialID:4,
         description:"5 cooking essentials",
         tutorialLink:'https://www.youtube.com/embed/2aEANqAUdeM'
-      }],
-      IDOFVIDEO:''
+      }]
     }
   }
 
@@ -33,17 +32,15 @@ class TutorialTable extends Component {
   }
 
   tutorialVideo = (cell, row) => {
-    var tutorialURL = this.state.tuts[cell-1].tutorialLink;
+    var tutorialURL = this.state.tutorialInfo[cell-1].tutorialLink;
     ReactDOM.render(<Video videourl={tutorialURL} />,document.getElementById('playvideo'));
   }
-
   render () {
-
     return (
       <div className="container-fluid userTable" >
       <div className="row">
         <div className="col-md-4">
-        <BootstrapTable data={this.state.tuts}
+        <BootstrapTable data={this.state.tutorialInfo}
         hover
         striped
         search>

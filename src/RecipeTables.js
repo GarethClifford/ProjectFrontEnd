@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 class BSTable extends React.Component {
   render() {
       return (
-        <BootstrapTable data={ this.props.data } options ={ { noDataText: 'There are currently no reviews for this recipe' } }>
+        <BootstrapTable if='reviewDropTable' data={ this.props.data } options ={ { noDataText: 'There are currently no reviews for this recipe' } }>
           <TableHeaderColumn dataField='reviewID' isKey={ true }>Review ID</TableHeaderColumn>
           <TableHeaderColumn dataField='reviewRating'>Rating</TableHeaderColumn>
           <TableHeaderColumn dataField='reviewComments'>Comments</TableHeaderColumn>
@@ -55,7 +55,7 @@ export default class RecipeTables extends Component {
     }
     deleteReview = (event) => {
       axios.delete('http://104.199.39.236:8080/MyPersonalProject/rest/reviews/deleteReview/' + event).then((reponse) => {
-      ReactDOM.render(<RecipeTables />,document.getElementById('creatingARecipe'));
+      ReactDOM.render(<RecipeTables />,document.getElementById('contentOfDiv'));
       });
 
     }
@@ -68,7 +68,7 @@ export default class RecipeTables extends Component {
     const options = {
       expandRowBgColor: 'rgb(244, 188, 66)',
       expandBy:'column',
-      noDataText: 'There are currently no reviews for this recipe'
+      noDataText: 'There are no recipes to show, please add some'
     }
 
     return (
