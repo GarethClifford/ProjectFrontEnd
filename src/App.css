@@ -5,6 +5,13 @@
   right: 0px;
 }
 
+@media (max-width: 700px) {
+  .button {
+    display: block;
+    margin: 5px;
+  }
+}
+
 .App-navbar {
   min-width: 1500px;
   max-width: 100%;
