@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { BootstrapTable, TableHeaderColumn, BSTable } from 'react-bootstrap-table';
+import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 class UserTables extends Component {
   constructor(props){
