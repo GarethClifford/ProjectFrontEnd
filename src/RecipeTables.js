@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import ReactDOM from 'react-dom';
-import {port, ipAddress, warFile} from './SettingUpIPURL.js'
+import {root} from './SettingUpIPURL.js'
 
 
 class BSTable extends React.Component {
@@ -36,7 +36,7 @@ export default class RecipeTables extends Component {
   }
 
     getAllRecipes = () => {
-      axios.get(ipAddress + warFile + 'recipes/getAll').then(response => {
+      axios.get("ipAddress" +" warFile" + 'recipes/getAll').then(response => {
         this.setState({
           infos: response.data
         });
@@ -46,7 +46,7 @@ export default class RecipeTables extends Component {
       return <button id={row.recipeID} className="btn btn-outline-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
     }
     deleteRecipe = (event) => {
-      axios.delete(ipAddress + warFile + 'recipes/deleteRecipe/' + event).then((response) => {
+      axios.delete('ipAddress' + 'warFile' + 'recipes/deleteRecipe/' + event).then((response) => {
       window.location.reload();
       });
 
@@ -55,7 +55,7 @@ export default class RecipeTables extends Component {
       return <button id={row.recipeID} className="btn btn-outline-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
     }
     deleteReview = (event) => {
-      axios.delete(ipAddress + warFile + 'reviews/deleteReview/' + event).then((reponse) => {
+      axios.delete('ipAddress' + 'warFile' + 'reviews/deleteReview/' + event).then((reponse) => {
       ReactDOM.render(<RecipeTables />,document.getElementById('contentOfDiv'));
       });
 
