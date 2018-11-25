@@ -7,16 +7,16 @@ import RecipeTables from './RecipeTables';
 
 class CreateReviews extends Component {
     getAllUsers = () => {
-      ReactDOM.render(<UserTables />,document.getElementById('creatingARecipe'));
+      ReactDOM.render(<UserTables />,document.getElementById('contentOfDiv'));
     }
     createUser = () => {
-      ReactDOM.render(<CreateUser />,document.getElementById('creatingARecipe'));
+      ReactDOM.render(<CreateUser />,document.getElementById('contentOfDiv'));
     }
   createReview = (event) => {
     event.preventDefault();
     var data ={
       reviewRating:document.getElementById('ratingOfRecipe').value,
-      reviewComments:document.getElementById('commentsReview').value,
+      reviewComments:document.getElementById('commentsInput').value,
       userID:document.getElementById('idUser').value,
       recipeID:document.getElementById('idRecipeNumber').value,
     }
@@ -25,22 +25,22 @@ class CreateReviews extends Component {
            console.log(response.data);
 
     });
-    document.getElementById('creatingARecipe').innerHTML='Review has been added';
-    ReactDOM.render(<RecipeTables />, document.getElementById('creatingARecipe'));
+    document.getElementById('contentOfDiv').innerHTML='Review has been added';
+    ReactDOM.render(<RecipeTables />, document.getElementById('contentOfDiv'));
 }
 
 
 componentDidMount() {
-  this.countCharacter();
+  this.countCharacterForComments();
 }
 
 
-countCharacter = () => {
+countCharacterForComments = () => {
   var maxText = 225;
-  document.getElementById('countMessage').innerHTML = '0 /' + maxText;
-  document.getElementById('commentsReview').onkeyup = function() {
-    var textLength = document.getElementById('commentsReview').value.length;
-    document.getElementById('countMessage').innerHTML = textLength + ' / ' + maxText
+  document.getElementById('commentContent').innerHTML = '0 /' + maxText;
+  document.getElementById('commentsInput').onkeyup = function() {
+    var textLength = document.getElementById('commentsInput').value.length;
+    document.getElementById('commentContent').innerHTML = textLength + ' / ' + maxText
   }
 }
 
@@ -58,8 +58,8 @@ render() {
     <input id = "ratingOfRecipe" className ="form-control" type = "number" placeholder = "Rating" style={{width:'150px'}} />
     Feel free to add any comments on the recipe)
     <br/>
-    <textarea id ="commentsReview" className ="form-control" type ="text" placeholder = "Comments" style={{width:'500px'}} rows='3' maxLength="225" />
-    <h6 className="pull-right" id="countMessage">''</h6>
+    <textarea id ="commentsInput" className ="form-control" type ="text" placeholder = "Comments" style={{width:'500px'}} rows='3' maxLength="225" />
+    <h6 className="pull-right" id="commentContent">''</h6>
     <br/>
     <button className="btn btn-success" onClick={this.createReview}>Add review</button>
     </div>

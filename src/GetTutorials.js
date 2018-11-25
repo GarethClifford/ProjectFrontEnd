@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import TutorialTable from './TutorialTable.js'
 
 class GetTutorials extends Component {
-functionGetTutorials() {
-  ReactDOM.render(<TutorialTable />,document.getElementById('creatingARecipe'));
+functionGetTutorialTable() {
+  ReactDOM.render(<TutorialTable />,document.getElementById('contentOfDiv'));
 }
   render() {
     return (
       <div>
-      <button className='btn btn-primary' onClick={() => this.functionGetTutorials()}>Some useful tutorials</button>
+      <button className='btn btn-primary' onClick={() => this.functionGetTutorialTable()}>Some useful tutorials</button>
       </div>
     );
   }

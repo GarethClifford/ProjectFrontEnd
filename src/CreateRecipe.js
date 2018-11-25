@@ -6,10 +6,10 @@ import CreateUser from './CreateUser';
 
 class CreateRecipe extends Component {
     getAllUsers = () => {
-      ReactDOM.render(<UserTables />,document.getElementById('creatingARecipe'));
+      ReactDOM.render(<UserTables />,document.getElementById('contentOfDiv'));
     }
     createUser = () => {
-      ReactDOM.render(<CreateUser />,document.getElementById('creatingARecipe'));
+      ReactDOM.render(<CreateUser />,document.getElementById('contentOfDiv'));
     }
   createRecipe = (event) => {
     event.preventDefault();
@@ -24,29 +24,29 @@ class CreateRecipe extends Component {
             console.log(response.data);
 
     });
-    document.getElementById('creatingARecipe').innerHTML='Recipe has been added'
+    document.getElementById('contentOfDiv').innerHTML='Recipe has been added'
 }
 componentDidMount() {
-  this.countCharacter1();
-  this.countCharacter2();
+  this.countCharacterForIngredients();
+  this.countCharacterForMethod();
 }
 
 
-countCharacter1 = () => {
+countCharacterForIngredients = () => {
   var maxText = 5000;
-  document.getElementById('countMessage1').innerHTML = '0 /' + maxText;
+  document.getElementById('ingredientsContent').innerHTML = '0 /' + maxText;
   document.getElementById('ingredientsOfRecipe').onkeyup = function() {
     var textLength = document.getElementById('ingredientsOfRecipe').value.length;
-    document.getElementById('countMessage1').innerHTML = textLength + ' / ' + maxText
+    document.getElementById('ingredientsContent').innerHTML = textLength + ' / ' + maxText
   }
 
 }
-countCharacter2 = () => {
+countCharacterForMethod = () => {
   var maxText = 5000;
-  document.getElementById('countMessage2').innerHTML = '0 /' + maxText;
+  document.getElementById('methodContent').innerHTML = '0 /' + maxText;
   document.getElementById('methodOfRecipe').onkeyup = function() {
     var textLength = document.getElementById('methodOfRecipe').value.length;
-    document.getElementById('countMessage2').innerHTML = textLength + ' / ' + maxText
+    document.getElementById('methodContent').innerHTML = textLength + ' / ' + maxText
   }
 
 }
@@ -61,10 +61,10 @@ render() {
     List all the ingredients
     <br/>
     <textarea id = "ingredientsOfRecipe" type = "text" placeholder = "Ingredients..." className ="form-control" style={{width:'500px'}} rows ='3' maxLength="5000" />
-    <h6 className="pull-right" id="countMessage1" >''</h6>
+    <h6 className="pull-right" id="ingredientsContent" >''</h6>
     Describe how you make your meal
-    <textarea id = "methodOfRecipe"  type = "text"placeholder = "Method..." className ="form-control" style={{width:'700px'}} rows ='4' maxLength="5000" />
-    <h6 className="pull-right" id="countMessage2" >''</h6>
+    <textarea id = "methodOfRecipe"  type = "text" placeholder = "Method..." className ="form-control" style={{width:'700px'}} rows ='4' maxLength="5000" />
+    <h6 className="pull-right" id="methodContent" >''</h6>
     Please enter your unique ID number, if you do not have one please click <a href ='#' onClick = {() => this.createUser()}> here </a> to create an account. If you do not know your Unique ID number, click <a href ='#' onClick = {() => this.getAllUsers()}> here </a> to find your ID number.
     <br/>
     <input id ="idOfUserAddingRecipe" type ="number" placeholder = "ID number" className ="form-control" style={{width:'150px'}} />

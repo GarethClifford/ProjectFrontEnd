@@ -5,7 +5,7 @@ import axios from 'axios';
 
 class CreateUser extends Component {
     getAllUsers = () => {
-      ReactDOM.render(<UserTables />,document.getElementById('creatingARecipe'));
+      ReactDOM.render(<UserTables />,document.getElementById('contentOfDiv'));
     }
   createUser = (event) => {
     event.preventDefault();
@@ -16,7 +16,7 @@ class CreateUser extends Component {
          .then((response) => {
             console.log(response.data);
     });
-    document.getElementById('creatingARecipe').innerHTML='User has been added'
+    document.getElementById('contentOfDiv').innerHTML='User has been added'
 }
 render() {
   return (

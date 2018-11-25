@@ -4,7 +4,7 @@ import CreateRecipe from './CreateRecipe.js';
 
 class AddRecipes extends Component {
 functionAddRecipes() {
-  ReactDOM.render(<CreateRecipe/>,document.getElementById('creatingARecipe'));
+  ReactDOM.render(<CreateRecipe/>,document.getElementById('contentOfDiv'));
 }
   render() {
     return (

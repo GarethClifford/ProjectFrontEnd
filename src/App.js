@@ -39,7 +39,7 @@ class App extends Component {
       </div>
     </div>
     <br/>
-    <div id='creatingARecipe'></div>
+    <div id='contentOfDiv'></div>
     </div>
     );
   }

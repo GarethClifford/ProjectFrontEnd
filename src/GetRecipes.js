@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import RecipeTables from './RecipeTables.js'
 
 class GetRecipes extends Component {
-functionGetAllRecipes() {
-  ReactDOM.render(<RecipeTables />,document.getElementById('creatingARecipe'));
+functionGetRecipeTables() {
+  ReactDOM.render(<RecipeTables />,document.getElementById('contentOfDiv'));
 }
   render() {
     return (
       <div>
-      <button className='btn btn' onClick={() => this.functionGetAllRecipes()}>Get recipes</button>
+      <button className='btn btn' onClick={() => this.functionGetRecipeTables()}>Get recipes</button>
       </div>
     );
   }
