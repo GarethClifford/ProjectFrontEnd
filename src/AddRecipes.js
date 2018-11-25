@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import CreateRecipes from './CreateRecipes.js';
+import CreateRecipe from './CreateRecipe.js';
 
 class AddRecipes extends Component {
 functionAddRecipes() {
