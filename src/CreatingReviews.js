@@ -59,7 +59,7 @@ render() {
     Feel free to add any comments on the recipe)
     <br/>
     <textarea id ="commentsReview" className ="form-control" type ="text" placeholder = "Comments" style={{width:'500px'}} rows='3' maxLength="225" />
-    <h6 className="pull-right" id="countMessage"></h6>
+    <h6 className="pull-right" id="countMessage">''</h6>
     <br/>
     <button className="btn btn-success" onClick={this.createReview}>Add review</button>
     </div>

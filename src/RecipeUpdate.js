@@ -52,11 +52,11 @@ Enter the new name
 Enter the new ingredients
 <br/>
 <textarea id = "newIngredients"  type = "text"placeholder = "Ingredients" className ="form-control" style={{width:'500px'}} rows ='3' maxLength="5000"/>
-<h6 className="pull-right" id="countMessage1" ></h6>
+<h6 className="pull-right" id="countMessage1" >''</h6>
 Enter the new method (Max of 5000 characeters)
 <br/>
 <textarea id ="newMethod" type ="text" placeholder = "Method" className ="form-control" style={{width:'700px'}} rows ='4' maxLength="5000" />
-<h6 className="pull-right" id="countMessage2"></h6>
+<h6 className="pull-right" id="countMessage2">''</h6>
 <br/>
 <button className="btn btn-success" onClick={this.updateRecipe}>Update recipe</button>
 </div>
