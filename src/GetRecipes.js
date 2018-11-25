@@ -9,7 +9,7 @@ functionGetRecipeTables() {
   render() {
     return (
       <div>
-      <button className='btn btn' onClick={() => this.functionGetRecipeTables()}>Get recipes</button>
+      <button className='btn btn-default' onClick={() => this.functionGetRecipeTables()}>Get recipes</button>
       </div>
     );
   }
