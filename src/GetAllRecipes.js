@@ -65,7 +65,7 @@ render() {
     Describe how you make your meal
     <textarea id = "methodOfRecipe"  type = "text"placeholder = "Method..." className ="form-control" style={{width:'700px'}} rows ='4' maxLength="5000" />
     <h6 className="pull-right" id="countMessage2" >''</h6>
-    Please enter your unique ID number, if you do not have one please click <a href ='' onClick = {() => this.createUser()}> here </a> to create an account. If you do not know your Unique ID number, click <a href ='' onClick = {() => this.getAllUsers()}> here </a> to find your ID number.
+    Please enter your unique ID number, if you do not have one please click <a href ='#' onClick = {() => this.createUser()}> here </a> to create an account. If you do not know your Unique ID number, click <a href ='#' onClick = {() => this.getAllUsers()}> here </a> to find your ID number.
     <br/>
     <input id ="idOfUserAddingRecipe" type ="number" placeholder = "ID number" className ="form-control" style={{width:'150px'}} />
     <br/>
