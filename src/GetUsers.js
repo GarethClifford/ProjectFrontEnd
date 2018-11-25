@@ -9,7 +9,7 @@ functionGetUserTables() {
   render() {
     return (
       <div>
-      <button className='btn btn' onClick={() => this.functionGetUserTables()}>Get users</button>
+      <button className='btn btn-default' onClick={() => this.functionGetUserTables()}>Get users</button>
       </div>
     );
   }
