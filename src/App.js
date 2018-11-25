@@ -7,7 +7,7 @@ import home from './images/home.jpg';
 import AddReview from './AddReview.js';
 import GetRecipes from './GetRecipes';
 import GetUsers from './GetUsers';
-import TutorialTable from './TutorialTable';
+import GetTutorials from './GetTutorials';
 import Homepage from './Homepage.js';
 
 
@@ -27,7 +27,7 @@ class App extends Component {
         <br/>
         <AddReview />
         <br/>
-        <TutorialTable />
+        <GetTutorials />
       </div>
       <div className="App-button2" style={{position:'absolute', top:'30%', left:'45%'}}>
         <GetRecipes />

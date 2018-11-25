@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import GetAllRecipes from './GetAllRecipes.js';
+import CreateRecipes from './CreateRecipes.js';
 
 class AddRecipes extends Component {
 functionAddRecipes() {
-  ReactDOM.render(<GetAllRecipes/>,document.getElementById('creatingARecipe'));
+  ReactDOM.render(<CreateRecipe/>,document.getElementById('creatingARecipe'));
 }
   render() {
     return (

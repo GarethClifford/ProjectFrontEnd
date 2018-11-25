@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 import ReactDOM from 'react-dom';
-import CreatingReviews from './CreatingReviews.js';
+import CreateReviews from './CreateReviews.js';
 
 class AddReview extends Component {
 functionAddRecipes() {
-  ReactDOM.render(<CreatingReviews />,document.getElementById('creatingARecipe'));
+  ReactDOM.render(<CreateReviews />,document.getElementById('creatingARecipe'));
 }
   render() {
     return (

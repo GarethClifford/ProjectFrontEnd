@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import CreateUser from './CreateUser';
 import RecipeTables from './RecipeTables';
 
-class CreatingReviews extends Component {
+class CreateReviews extends Component {
     getAllUsers = () => {
       ReactDOM.render(<UserTables />,document.getElementById('creatingARecipe'));
     }
@@ -67,4 +67,4 @@ render() {
 }
 }
 
-export default CreatingReviews;
+export default CreateReviews;
