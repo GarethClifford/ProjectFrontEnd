@@ -36,7 +36,7 @@ export default class RecipeTables extends Component {
   }
 
     getAllRecipes = () => {
-      axios.get("ipAddress" +" warFile" + 'recipes/getAll').then(response => {
+      axios.get(root + 'recipes/getAll').then(response => {
         this.setState({
           infos: response.data
         });
@@ -46,7 +46,7 @@ export default class RecipeTables extends Component {
       return <button id={row.recipeID} className="btn btn-outline-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
     }
     deleteRecipe = (event) => {
-      axios.delete('ipAddress' + 'warFile' + 'recipes/deleteRecipe/' + event).then((response) => {
+      axios.delete(root + 'recipes/deleteRecipe/' + event).then((response) => {
       window.location.reload();
       });
 
@@ -55,7 +55,7 @@ export default class RecipeTables extends Component {
       return <button id={row.recipeID} className="btn btn-outline-danger" onClick={() => this.deleteRecipe(row.recipeID)}>Delete recipe</button>;
     }
     deleteReview = (event) => {
-      axios.delete('ipAddress' + 'warFile' + 'reviews/deleteReview/' + event).then((reponse) => {
+      axios.delete(root + 'reviews/deleteReview/' + event).then((reponse) => {
       ReactDOM.render(<RecipeTables />,document.getElementById('contentOfDiv'));
       });
 
@@ -74,6 +74,7 @@ export default class RecipeTables extends Component {
 
     return (
       <div className="recipeTable" style={{ width: '75%', margin:'auto' }}>
+      <p>To see a review of the recipe, click its ID number </p>
       <BootstrapTable data={this.state.infos}
       id='recipeTableShow'
       height='650'

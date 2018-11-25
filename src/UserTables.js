@@ -14,7 +14,7 @@ class UserTables extends Component {
     this.getAllUsers();
   }
   getAllUsers = () => {
-    axios.get('http://104.199.39.236:8080/MyPersonalProject/rest/users/getAll').then(response => {
+    axios.get(root + 'users/getAll').then(response => {
       this.setState({
         peoples: response.data
       });
@@ -22,7 +22,7 @@ class UserTables extends Component {
     console.log(root);
   }
   deleteUser = (event) => {
-    axios.delete('http://104.199.39.236:8080/MyPersonalProject/rest/users/deleteUser/' + event).then((response) => {
+    axios.delete(root + 'users/deleteUser/' + event).then((response) => {
   window.location.reload()
     });
   }
