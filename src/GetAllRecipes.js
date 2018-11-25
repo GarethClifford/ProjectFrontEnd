@@ -5,9 +5,6 @@ import ReactDOM from 'react-dom';
 import CreateUser from './CreateUser';
 
 class GetAllRecipes extends Component {
-  constructor(props) {
-    super(props);
-    }
     getAllUsers = () => {
       ReactDOM.render(<UserTables />,document.getElementById('creatingARecipe'));
     }
@@ -40,7 +37,6 @@ countCharacter1 = () => {
   document.getElementById('countMessage1').innerHTML = '0 /' + maxText;
   document.getElementById('ingredientsOfRecipe').onkeyup = function() {
     var textLength = document.getElementById('ingredientsOfRecipe').value.length;
-    var textRemaining = maxText - textLength;
     document.getElementById('countMessage1').innerHTML = textLength + ' / ' + maxText
   }
 
@@ -50,7 +46,6 @@ countCharacter2 = () => {
   document.getElementById('countMessage2').innerHTML = '0 /' + maxText;
   document.getElementById('methodOfRecipe').onkeyup = function() {
     var textLength = document.getElementById('methodOfRecipe').value.length;
-    var textRemaining = maxText - textLength;
     document.getElementById('countMessage2').innerHTML = textLength + ' / ' + maxText
   }
 

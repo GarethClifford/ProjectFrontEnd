@@ -17,7 +17,7 @@ class Videothing extends Component {
     return (
       <div id='youtubelink'>
       <p> Please clear the screen to watch a second clip. Click the button. </p>
-      <iframe id = {this.props.videoid} width='560' height='315' src={this.state.tutorialLINK} frameBorder='0' allow='autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
+      <iframe id = {this.props.videoid} title="Youtube clip of a tutrorial" width='560' height='315' src={this.state.tutorialLINK} frameBorder='0' allow='autoplay;encrypted-media;gyroscope; picture-in-picture' allowFullScreen></iframe>
       </div>
     );
   }
