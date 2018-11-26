@@ -11,7 +11,7 @@ class BSTable extends React.Component {
         <BootstrapTable if='reviewDropTable' data={ this.props.data } options ={ { noDataText: 'There are currently no reviews for this recipe' } }>
           <TableHeaderColumn dataField='reviewID' isKey={ true }>Review ID</TableHeaderColumn>
           <TableHeaderColumn dataField='reviewRating'>Rating</TableHeaderColumn>
-          <TableHeaderColumn dataField='reviewComments'>Comments</TableHeaderColumn>
+          <TableHeaderColumn tdStyle={{ whiteSpace: 'unset'}} dataField='reviewComments'>Comments</TableHeaderColumn>
           <TableHeaderColumn dataField='userID'>User ID</TableHeaderColumn>
         </BootstrapTable>);
 }
