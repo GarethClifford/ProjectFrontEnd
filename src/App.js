@@ -16,11 +16,11 @@ class App extends Component {
   render() {
     return (
     <div >
-     <div className="App-navbar container">
+     <div className="App-navbar">
       <img src={home} className="App-logo" alt="logo" />
       <h1 style={{ position:'absolute', top:'5%', left:'25%' }}> My Personal Project <Homepage /> </h1>
       <div style={{paddingleft: '6px'}}>
-      <div className="App-button1" style={{position:'absolute',top:'30%', left:'25%', font:'5vw' }} >
+      <div className="App-button1" style={{position:'absolute',top:'30%', left:'25%'}} >
         <AddRecipes appRecipe="Add recipe" />
         <br/>
         <AddUser />
